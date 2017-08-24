@@ -1,0 +1,69 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element" uib-dropdown>
+                    <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                    <a uib-dropdown-toggle href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">David Williams</strong>
+                             </span>
+                                <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                            </span>
+                    </a>
+                    <ul uib-dropdown-menu class="animated fadeInRight m-t-xs">
+                        <li><a ui-sref="app.profile">Profile</a></li>
+                        <li><a ui-sref="app.contacts">Contacts</a></li>
+                        <li><a ui-sref="mailbox.inbox">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a ui-sref="login">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    Ko-Ka
+                </div>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="main.card-search"><i class="fa fa-search"></i> <span class="nav-label">{{ 'CARDSEARCH' | translate }}</span> </a>
+            </li>
+
+            <li ng-class="{active: $state.includes('card')}">
+                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARD' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('card')}">
+                    <li ui-sref-active="active"><a ui-sref="card.details">Details</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.cardholder-information">Cardholder Information</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.alerts-notifications">Alerts & Notifications</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.creditcard-limits">Credit Card Limits</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.statement-cycle">Statement Cycle</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.supplementary-card">Supplementary Card</a></li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('cardholder')}">
+                <a href="#"><i class="fa fa-user-circle"></i> <span class="nav-label">{{ 'CARDHOLDER' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardholder')}">
+                    <li ui-sref-active="active"><a ui-sref="cardholder.information">Information</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardholder.cardby-memberid">Cards by Member Id</a></li>
+            </li>
+            </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('cardprogram')}">
+                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardprogram')}">
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.details">Details</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.creditcard-rules">Credit Card Rules</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.fraud">Fraud</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.mcc-priviledges">MCC Priviledges</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.parameters">Parameters</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.restrictions">Restrictions</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.rewards">Rewards</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.services">Services</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>
