@@ -1,87 +1,97 @@
-<div class="row  border-bottom white-bg dashboard-header">
-    <div class="col-sm-3">
-        <h2>{{ 'WELCOME' | translate }}</h2>
-        <small>{{ 'MESSAGEINFO' | translate }}</small>
-        <ul class="list-group clear-list m-t">
-            <li class="list-group-item fist-item">
-                <span class="pull-right">
-                                    09:00 pm
-                                </span>
-                <span class="label label-success">1</span> Please contact me
-            </li>
-            <li class="list-group-item">
-                <span class="pull-right">
-                                    10:16 am
-                                </span>
-                <span class="label label-info">2</span> Sign a contract
-            </li>
-            <li class="list-group-item">
-                <span class="pull-right">
-                                    08:22 pm
-                                </span>
-                <span class="label label-primary">3</span> Open new shop
-            </li>
-            <li class="list-group-item">
-                <span class="pull-right">
-                                    11:06 pm
-                                </span>
-                <span class="label label-default">4</span> Call back to Sylvia
-            </li>
-            <li class="list-group-item">
-                <span class="pull-right">
-                                    12:00 am
-                                </span>
-                <span class="label label-primary">5</span> Write a letter to Sandra
-            </li>
-        </ul>
-    </div>
-    <div class="col-sm-6">
-        <div class="flot-chart dashboard-chart" ng-controller="dashboardFlotOne as chart">
-            <div flot class="flot-chart-content" dataset="chart.flotData" options="chart.flotOptions"></div>
-        </div>
-        <div class="row text-left">
-            <div class="col-xs-4">
-                <div class=" m-l-md">
-                    <span class="h4 font-bold m-t block">$ 406,100</span>
-                    <small class="text-muted m-b block">Sales marketing report</small>
+<link rel="stylesheet" href="css/views/card-search.css">
+
+<div class="card-search">
+    <div class="row  border-bottom white-bg dashboard-header">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">Card No</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Authorized Non User or Secondary Card</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">User Id</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="false">SSN/NID</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-5" aria-expanded="false">Card Reference Number</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-6" aria-expanded="false">Member ID</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-7" aria-expanded="false">Caller Information</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-8" aria-expanded="false">Business Information</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-9" aria-expanded="false">Date of Birth</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-10" aria-expanded="false">Customer ID</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+                        <form method="get" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Card Program</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control">
+                                        <option value="0">Selection 1</option>
+                                        <option value="1">Selection 2</option>
+                                        <option value="2">Selection 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Card Account Number</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"> 
+                                    <!-- <span class="help-block m-b-none">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                        </form>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-pane">
+                    <div class="panel-body">
+                        tab 2
+                    </div>
+                </div>
+                <div id="tab-3" class="tab-pane">
+                    <div class="panel-body">
+                        tab 3
+                    </div>
+                </div>
+                <div id="tab-4" class="tab-pane">
+                    <div class="panel-body">
+                        tab 4
+                    </div>
+                </div>
+                <div id="tab-5" class="tab-pane">
+                    <div class="panel-body">
+                        tab 5
+                    </div>
+                </div>
+                <div id="tab-6" class="tab-pane">
+                    <div class="panel-body">
+                        tab 6
+                    </div>
+                </div>
+                <div id="tab-7" class="tab-pane">
+                    <div class="panel-body">
+                        tab 7
+                    </div>
+                </div>
+                <div id="tab-8" class="tab-pane">
+                    <div class="panel-body">
+                        tab 8
+                    </div>
+                </div>
+                <div id="tab-9" class="tab-pane">
+                    <div class="panel-body">
+                        tab 9
+                    </div>
+                </div>
+                <div id="tab-10" class="tab-pane">
+                    <div class="panel-body">
+                        tab 10
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-4">
-                <span class="h4 font-bold m-t block">$ 150,401</span>
-                <small class="text-muted m-b block">Annual sales revenue</small>
-            </div>
-            <div class="col-xs-4">
-                <span class="h4 font-bold m-t block">$ 16,822</span>
-                <small class="text-muted m-b block">Half-year revenue margin</small>
+            <div class="command">
+                <button class="btn btn-default">Clear</button>
+                <button class="btn btn-primary">Search</button>
             </div>
 
         </div>
     </div>
-    <div class="col-sm-3">
-        <div class="statistic-box">
-            <h4>
-                Project Beta progress
-            </h4>
-
-            <p>
-                You have two project with not compleated task.
-            </p>
-
-            <div class="row text-center" ng-controller="chartJsCtrl as chart">
-                <div class="col-lg-6">
-                    <canvas polarchart options="chart.polarOptions" data="chart.polarData" width="80" height="80"></canvas>
-                    <h5>Kolter</h5>
-                </div>
-                <div class="col-lg-6">
-                    <canvas doughnutchart options="chart.doughnutOptions" data="chart.doughnutData" width="78" height="78"></canvas>
-                    <h5>Maxtor</h5>
-                </div>
-            </div>
-            <div class="m-t">
-                <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
-            </div>
-
-        </div>
-    </div>
-
 </div>

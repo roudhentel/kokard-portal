@@ -65,7 +65,7 @@ function MainCtrl($http, toastr, toastrConfig) {
         toastrConfig.timeOut = 4000;
         
         // toaster.info('Responsive Admin Theme', 'Welcome to INSPINIA');
-        toastr["success"]('Roudhentel Nagoy', 'Welcome to Ko-Kard Portal');
+        toastr["success"]('Gary Sproule', 'Welcome to Ko-Kard Portal');
 
     }, 1300);
 
