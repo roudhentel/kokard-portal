@@ -57,22 +57,15 @@
  *
  */
 function MainCtrl($http, toastr, toastrConfig) {
-
-    setTimeout(function () {
-        toastrConfig.closeButton = true;
-        toastrConfig.progressBar = true;
-        toastrConfig.showMethod = 'slideDown';
-        toastrConfig.timeOut = 4000;
-        
-        // toaster.info('Responsive Admin Theme', 'Welcome to INSPINIA');
-        toastr["success"]('Gary Sproule', 'Welcome to Ko-Kard Portal');
-
-    }, 1300);
-
     /**
      * countries - Used as duallistbox in form advanced view
      */
+    this.login = function (isFormValid) {
+        console.log("here");
+        if (!isFormValid) return;
 
+        $state.go('main.card-search');
+    }
     this.countries = [
         { name: 'Amsterdam' },
         { name: 'Washington' },
