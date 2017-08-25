@@ -1,8 +1,15 @@
 .card-search {
-    .tabs-container {
-        .command {
-            margin-top: 10px;
-            text-align: right;
-        }
+    .wrapper-content {
+        margin-top: 10px;
+        background: #FFF;
+        border-top: 1px solid #e7eaec;
+
+        .tabs-container {
+
+            .command {
+                margin-top: 10px;
+                text-align: right;
+            }
+        }    
     }
 }

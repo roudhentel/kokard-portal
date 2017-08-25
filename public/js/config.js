@@ -34,18 +34,19 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
                         {
-
-                            serie: true,
-                            name: 'angular-flot',
-                            files: ['js/plugins/flot/jquery.flot.js', 'js/plugins/flot/jquery.flot.time.js', 'js/plugins/flot/jquery.flot.tooltip.min.js', 'js/plugins/flot/jquery.flot.spline.js', 'js/plugins/flot/jquery.flot.resize.js', 'js/plugins/flot/jquery.flot.pie.js', 'js/plugins/flot/curvedLines.js', 'js/plugins/flot/angular-flot.js',]
-                        },
-                        {
                             name: 'angles',
                             files: ['js/plugins/chartJs/angles.js', 'js/plugins/chartJs/Chart.min.js']
                         },
                         {
                             name: 'angular-peity',
                             files: ['js/plugins/peity/jquery.peity.min.js', 'js/plugins/peity/angular-peity.js']
+                        },
+                        {
+                            files: ['js/plugins/moment/moment.min.js']
+                        },
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css', 'js/plugins/datapicker/angular-datepicker.js']
                         }
                     ]);
                 }
@@ -58,25 +59,33 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('card.details', {
             url: "/card-details",
-            templateUrl: "views/card-details.html",
+            templateUrl: "views/card/card-details.html",
             data: { pageTitle: 'Card Details' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        {
-
-                            serie: true,
-                            name: 'angular-flot',
-                            files: ['js/plugins/flot/jquery.flot.js', 'js/plugins/flot/jquery.flot.time.js', 'js/plugins/flot/jquery.flot.tooltip.min.js', 'js/plugins/flot/jquery.flot.spline.js', 'js/plugins/flot/jquery.flot.resize.js', 'js/plugins/flot/jquery.flot.pie.js', 'js/plugins/flot/curvedLines.js', 'js/plugins/flot/angular-flot.js',]
-                        },
-                        {
-                            name: 'angles',
-                            files: ['js/plugins/chartJs/angles.js', 'js/plugins/chartJs/Chart.min.js']
-                        },
-                        {
-                            name: 'angular-peity',
-                            files: ['js/plugins/peity/jquery.peity.min.js', 'js/plugins/peity/angular-peity.js']
-                        }
+                    ]);
+                }
+            }
+        })
+        .state('card.cardholder-information', {
+            url: "/cardholder-information",
+            templateUrl: "views/card/cardholder-information.html",
+            data: { pageTitle: 'Cardholder Information' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                    ]);
+                }
+            }
+        })
+        .state('card.alerts-notifications', {
+            url: "/alerts-notifications",
+            templateUrl: "views/card/alerts-notifications.html",
+            data: { pageTitle: 'Alerts and Notifications' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
                     ]);
                 }
             }
@@ -181,13 +190,8 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/cardprogram/services.html",
             data: { pageTitle: 'Services' }
         })
-        .state('logins', {
-            url: "/logins",
-            templateUrl: "views/login.html",
-            data: { pageTitle: 'Login', specialClass: 'gray-bg' }
-        })
-        .state('login_two_columns', {
-            url: "/login_two_columns",
+        .state('login', {
+            url: "/login",
             templateUrl: "views/login_two_columns.html",
             data: { pageTitle: 'Login two columns', specialClass: 'gray-bg' }
         })

@@ -118,7 +118,11 @@ function responsiveVideo() {
 function iboxTools($timeout) {
     return {
         restrict: 'A',
-        scope: true,
+        scope: {
+            editVisible: '=',
+            configVisible: '=',
+            closeVisible: '='
+        },
         templateUrl: 'views/common/ibox_tools.html',
         controller: function ($scope, $element) {
             // Function for collapse ibox

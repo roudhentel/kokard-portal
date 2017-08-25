@@ -1,0 +1,32 @@
+.alerts-notifications {
+    .wrapper-content {
+        .row.bg-primary {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 0;
+
+            .form-group {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+
+                .col-sm-3 {
+                    text-align: right;
+                }
+
+                .card-accounts {
+                    color: #676a6c;
+                }
+            }
+        }
+
+        .profile-setting {
+            margin-top: 10px;
+
+            .row {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
