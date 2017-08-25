@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="css/views/card/creditcard-limits.css">
+
+<div class="creditcard-limits">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-10">
+            <h2>Credit Card Limits</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    Card
+                </li>
+                <li class="active">
+                    <strong>Credit Card Limits</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Set Limits</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                Card Limit
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                Request Log Date
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="input-group date">
+                                    <input type="datetime" class="form-control" date-time ng-model="sampleDate" view="date" auto-close="true" min-view="date"
+                                        format="YYYY-MM-DD">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                Status
+                            </div>
+                            <div class="col-sm-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 command">
+                        <button class="btn btn-primary">Update Limits</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox float-e-margins alerts">
+            <div class="ibox-title">
+                <h5>Overlimit Preferences</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="checkbox checkbox-success">
+                                    <input id="checkbox2" type="checkbox" >
+                                    <label for="checkbox2">Opt-in for Overlimit</label>
+                                    <i class="fa fa-info-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
