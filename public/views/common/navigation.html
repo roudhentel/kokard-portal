@@ -5,13 +5,13 @@
 
                 <div class="profile-element" uib-dropdown>
                     <img alt="image" class="img-circle" src="img/profile.png" />
-                    <a uib-dropdown-toggle href>
-                            <span class="clear">
-                                <span class="block m-t-xs">
-                                    <strong class="font-bold">Gary Sproule</strong>
-                             </span>
-                                <span class="text-muted text-xs block">Chairman <b class="caret"></b></span>
+                    <a uib-dropdown-toggle>
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">Gary Sproule</strong>
                             </span>
+                            <span class="text-muted text-xs block">Chairman <b class="caret"></b></span>
+                        </span>
                     </a>
                     <ul uib-dropdown-menu class="animated fadeInRight m-t-xs">
                         <li><a ui-sref="app.profile">Profile</a></li>
@@ -30,28 +30,27 @@
             </li>
 
             <li ng-class="{active: $state.includes('card')}">
-                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARD' | translate }}</span><span class="fa arrow"></span></a>
+                <a><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARD' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('card')}">
-                    <li ui-sref-active="active"><a ui-sref="card.details">Summary</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.cardholder-information">Cardholder Information</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.alerts-notifications">Alerts & Notifications</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.creditcard-limits">Credit Card Limits</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.creditcard-statement-cycle">Credit Card Statement Cycle</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.supplementary-card">Supplementary Card</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.details">{{'SUMMARY' | translate}}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.cardholder-information">{{'CARDHOLDERINFORMATION' | translate}}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.alerts-notifications">{{'ALERTSANDNOTIFICATIONS' | translate}}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.creditcard-limits">{{'CREDITCARDLIMITS' | translate}}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.creditcard-statement-cycle">{{'CCSTATEMENTCYCLE' | translate}}</a></li>
+                    <li ui-sref-active="active"><a ui-sref="card.supplementary-card">{{'SUPCARD' | translate}}</a></li>
                 </ul>
             </li>
 
             <li ng-class="{active: $state.includes('cardholder')}">
-                <a href="#"><i class="fa fa-user-circle"></i> <span class="nav-label">{{ 'CARDHOLDER' | translate }}</span><span class="fa arrow"></span></a>
+                <a><i class="fa fa-user-circle"></i> <span class="nav-label">{{ 'CARDHOLDER' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardholder')}">
                     <li ui-sref-active="active"><a ui-sref="cardholder.profile">Profile</a></li>
                     <li ui-sref-active="active"><a ui-sref="cardholder.cardby-memberid">Cards by Member Id</a></li>
-            </li>
-            </ul>
+                </ul>
             </li>
 
             <li ng-class="{active: $state.includes('cardprogram')}">
-                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
+                <a><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardprogram')}">
                     <li ui-sref-active="active"><a ui-sref="cardprogram.details">Details</a></li>
                     <li ui-sref-active="active"><a ui-sref="cardprogram.creditcard-rules">Credit Card Rules</a></li>
