@@ -53,23 +53,20 @@
                             <th>Active</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody ng-repeat="f in frauds">
+                        <tr class="title">
                             <td colspan="15" class="aleft">
-                                <label class="control-label">LIMITS</label>
+                                <label class="control-label">{{f.name}}</label>
                             </td>
                         </tr>
-                        <tr ng-repeat="l in limits">
+                        <tr ng-repeat="l in f.list">
                             <td>{{l.srno}}</td>
                             <td>{{l.fraudParameter}}</td>
                             <td>{{l.checkTime}}</td>
                             <td>{{l.units.value}}</td>
                             <td>
-                                <select class="form-control" ng-model="l.units.unit">
-                                    <option value="B">Boundary</option>
-                                    <option value="W">Calendar Week</option>
-                                    <option value="D">Day</option>
-                                </select>
+                                <select class="form-control" ng-model="l.units.unit"
+                                        ng-options="u.value as u.text for u in units"></select>
                             </td>
                             <td>{{l.values.value}}</td>
                             <td>{{l.values.minimum}}</td>
@@ -108,24 +105,6 @@
                             <td>
                                 <a>Update</a>
                             </td>
-                        </tr>
-
-                        <tr>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

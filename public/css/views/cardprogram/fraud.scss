@@ -9,7 +9,7 @@
                 }
 
                 .command {
-                    text-align: right;    
+                    text-align: right;
                 }
             }
 
@@ -22,15 +22,22 @@
                         }
                     }
                 }
+
                 tbody {
                     tr {
+                        &.title {
+                            background: #1ab394;
+                            color: #fff;
+                            font-size: 120%;
+                        }
+
                         td {
                             vertical-align: middle;
 
                             &:not(:nth-child(2)) {
                                 text-align: center;
                             }
-                            
+
                             &.aleft {
                                 text-align: left;
                             }
