@@ -3,7 +3,7 @@
 <div class="cardprogram-details">
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-10">
-            <h2>Profile</h2>
+            <h2>Details</h2>
             <ol class="breadcrumb">
                 <li>
                     <a href="#">Home</a>
@@ -240,7 +240,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <div class="col-sm-5">
-                                Service Code Digit3
+                                Service Code Digit 3
                             </div>
                             <label class="col-sm-7 control-label">0-Normal rules Auth</label>
                         </div>
@@ -248,6 +248,328 @@
                     <div class="col-sm-6"></div>
                 </div>
 
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Allowed Components</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Cardholder Site
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkCardholderSite" type="checkbox">
+                                    <label for="chkCardholderSite"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Customer Services Site
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkCustomerServicesSite" type="checkbox">
+                                    <label for="chkCustomerServicesSite"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                IVR
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkIVR" type="checkbox">
+                                    <label for="chkIVR"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Web Services</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkWebServices" type="checkbox">
+                                <label for="chkWebServices"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                FastCash
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkFastCash" type="checkbox">
+                                    <label for="chkFastCash"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                ACH
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkACH" type="checkbox">
+                                    <label for="chkACH"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Card Images</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <span>Front Image</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <span>Back Image</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="img/card-front.jpg" alt="front image" class="card-images">
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="img/card-back.jpg" alt="back image" class="card-images">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Program Checks</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                ATM Usage
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkATMUsage" type="checkbox">
+                                    <label for="chkATMUsage"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Apply OFAC
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkApplyOFAC" type="checkbox">
+                                    <label for="chkApplyOFAC"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                POS Usage
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkPOSUsage" type="checkbox">
+                                    <label for="chkPOSUsage"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Apply AVS</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkApplyAVS" type="checkbox">
+                                <label for="chkApplyAVS"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                PIN Transactions
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkPINTrans" type="checkbox">
+                                    <label for="chkPINTrans"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Track Generation after OFAC/AVS
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkTrackGeneration" type="checkbox">
+                                    <label for="chkTrackGeneration"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Signature Transactions
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkSignatureTrans" type="checkbox">
+                                    <label for="chkSignatureTrans"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Activate Card Without Registration
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkActivateWOReg" type="checkbox">
+                                    <label for="chkActivateWOReg"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Apply Fraud Rules
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkApplyFraudRules" type="checkbox">
+                                    <label for="chkApplyFraudRules"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Verify New CH Web Login
+                            </div>
+                            <label class="col-sm-7 control-label">PIN</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Commission Distribution Type
+                            </div>
+                            <label class="col-sm-7 control-label">N/A</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Commission Distribution Flow
+                            </div>
+                            <label class="col-sm-7 control-label">N/A</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Commission Effective Levels
+                            </div>
+                            <label class="col-sm-7 control-label"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Discount Rate Plan
+                            </div>
+                            <label class="col-sm-7 control-label">N/A</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Allowed Networks</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Networks
+                            </div>
+                            <div class="col-sm-7">
+                                <select class="form-control" multiple>
+                                    <option value="0">Selection 1</option>
+                                    <option value="1">Selection 2</option>
+                                    <option value="2">Selection 3</option>
+                                    <option value="3">Selection 4</option>
+                                    <option value="4">Selection 5</option>
+                                    <option value="5">Selection 6</option>
+                                    <option value="6">Selection 7</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
             </div>
         </div>
         <div class="row">

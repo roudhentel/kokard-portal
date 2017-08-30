@@ -1,1 +1,410 @@
-cc rules
+<link rel="stylesheet" href="css/views/cardprogram/creditcard-rules.css">
+
+<div class="creditcard-rules">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-10">
+            <h2>Details</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    Card Program
+                </li>
+                <li class="active">
+                    <strong>Details</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Credit Limit's Section</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Minimum Credit Limit
+                            </div>
+                            <label class="col-sm-7 control-label">0.00</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Cash Advance Basis
+                            </div>
+                            <label class="col-sm-7 control-label">Percentage</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Maximum Credit Limit
+                            </div>
+                            <label class="col-sm-7 control-label">100000.00</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Cash Advance Value</div>
+                        <label class="col-sm-7 control-label">100.00</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Extend Limit of Supplementary
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkExtendLimitSupp" type="checkbox">
+                                    <label for="chkExtendLimitSupp"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Cash Ceil Factor
+                            </div>
+                            <label class="col-sm-7 control-label">1000</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Financial Charges Section</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Financial Charges Purchase Criteria
+                            </div>
+                            <label class="col-sm-7 control-label">apply interest on partial payment</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Financial Charges Cash Advance Criteria</div>
+                        <label class="col-sm-7 control-label">N/A</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Distribute Financial Charges On Supplementary
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkDisFinChrgSup" type="checkbox">
+                                    <label for="chkDisFinChrgSup"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Payment Rule's Section</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Minimum Payment
+                            </div>
+                            <label class="col-sm-7 control-label">25.00%</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Add Financial Charges in Minimum Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkAddFinChrMinPay" type="checkbox">
+                                <label for="chkAddFinChrMinPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Minimum Payment Threshold
+                            </div>
+                            <label class="col-sm-7 control-label">25.00</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Add Transaction Fee in Minimum Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkAddTransFeeMinPay" type="checkbox">
+                                <label for="chkAddTransFeeMinPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Is Card Level Distribution
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkIsCardLvlDist" type="checkbox">
+                                    <label for="chkIsCardLvlDist"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Add Overdraft Fee in Minimum Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkAddOvrdrfFeeMinPay" type="checkbox">
+                                <label for="chkAddOvrdrfFeeMinPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Card Distribution Order
+                            </div>
+                            <label class="col-sm-7 control-label">Proportional</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Add Late Payment Fee in Minimum Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkAddLatePayFeeMinPay" type="checkbox">
+                                <label for="chkAddLatePayFeeMinPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Transaction Distribution Order
+                            </div>
+                            <label class="col-sm-7 control-label">Order of Transaction Date</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Add Previous Remaining in Minimum Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkAddPrevRemMinPay" type="checkbox">
+                                <label for="chkAddPrevRemMinPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Supplementary Impact on Parent's Limit
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkSupImpParLim" type="checkbox">
+                                    <label for="chkSupImpParLim"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Consider Purchase Return as Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkConPurRetPay" type="checkbox">
+                                <label for="chkConPurRetPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Reserve Extra Payment on Supplementary Card
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkResExtPaySupCard" type="checkbox">
+                                    <label for="chkResExtPaySupCard"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Consider Cash Adjustment as Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkConCashAdjPay" type="checkbox">
+                                <label for="chkConCashAdjPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Consider Reversal as Payment</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkConRevPay" type="checkbox">
+                                <label for="chkConRevPay"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Statement Section</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Statement Generation Day of Month
+                            </div>
+                            <label class="col-sm-7 control-label">21</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Add Days for Due Date
+                            </div>
+                            <label class="col-sm-7 control-label">10</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Apply Penalty after 'N' non payments
+                            </div>
+                            <label class="col-sm-7 control-label">N/A</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Payment Rule's Section</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Overdraft Frequency
+                            </div>
+                            <label class="col-sm-7 control-label">Only one Overdraft fee in a billing cycle</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Apply Recurring Overdraft Fee</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkApplyRecOvdftFee" type="checkbox">
+                                <label for="chkApplyRecOvdftFee"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Overdraft Basis
+                            </div>
+                            <label class="col-sm-7 control-label">Fixed</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Can Use Parent's Overdraft Limit</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkCanUseParOvdftLim" type="checkbox">
+                                <label for="chkCanUseParOvdftLim"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Overdraft Value
+                            </div>
+                            <label class="col-sm-7 control-label">10.00</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Overdraft on Financial Charges</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkOvdftFinChrg" type="checkbox">
+                                <label for="chkOvdftFinChrg"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-5">Overdraft on Fee</div>
+                        <div class="col-sm-7">
+                            <div class="checkbox checkbox-success">
+                                <input id="chkOvrdftFee" type="checkbox">
+                                <label for="chkOvrdftFee"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"><br></div>
+    </div>
+
+</div>

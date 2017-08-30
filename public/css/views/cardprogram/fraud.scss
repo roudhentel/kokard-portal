@@ -1,0 +1,43 @@
+.fraud {
+    .wrapper-content {
+        .ibox-content {
+            .row {
+                margin-bottom: 1%;
+
+                .ibox-title {
+                    border-width: 1px 0 0;
+                }
+
+                .command {
+                    text-align: right;    
+                }
+            }
+
+            table {
+                thead {
+                    tr {
+                        th {
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            vertical-align: middle;
+
+                            &:not(:nth-child(2)) {
+                                text-align: center;
+                            }
+                            
+                            &.aleft {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

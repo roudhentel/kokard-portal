@@ -280,17 +280,45 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('cardprogram.details', {
             url: "/cardprogram-details",
             templateUrl: "views/cardprogram/details.html",
-            data: { pageTitle: 'Card Program' }
+            data: { pageTitle: 'Card Program' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        }
+                    ]);
+                }
+            }
         })
         .state('cardprogram.creditcard-rules', {
             url: "/cardprogram-creditcard-rules",
             templateUrl: "views/cardprogram/creditcard-rules.html",
-            data: { pageTitle: 'Credit Card Rules' }
+            data: { pageTitle: 'Credit Card Rules' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        }
+                    ]);
+                }
+            }
         })
         .state('cardprogram.fraud', {
             url: "/cardprogram-fraud",
             templateUrl: "views/cardprogram/fraud.html",
-            data: { pageTitle: 'Fraud' }
+            data: { pageTitle: 'Fraud' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        }
+                    ]);
+                }
+            },
+            controller: "fraudCtrl" 
         })
         .state('cardprogram.mcc-priviledges', {
             url: "/cardprogram-mcc-priviledges",
