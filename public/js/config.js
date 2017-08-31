@@ -318,7 +318,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                     ]);
                 }
             },
-            controller: "fraudCtrl" 
+            controller: "fraudCtrl"
         })
         .state('cardprogram.mcc-priviledges', {
             url: "/cardprogram-mcc-priviledges",
@@ -343,7 +343,17 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('cardprogram.services', {
             url: "/cardprogram-services",
             templateUrl: "views/cardprogram/services.html",
-            data: { pageTitle: 'Services' }
+            data: { pageTitle: 'Services' },
+            controller: "servicesCtrl",
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        }
+                    ]);
+                }
+            }
         })
         .state('logins', {
             url: "/login",
