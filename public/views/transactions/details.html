@@ -1,0 +1,176 @@
+<link rel="stylesheet" href="css/views/transactions/details.css">
+
+<div class="transactions-details">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-10">
+            <h2>Transaction Details</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    Transactions
+                </li>
+                <li class="active">
+                    <strong>Details</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Search Transaction</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                Transaction Date
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-4 search">
+                                        <label>Recent Activity</label>
+                                        <select class="form-control">
+                                            <option value="0">Selection 1</option>
+                                            <option value="1">Selection 2</option>
+                                            <option value="2">Selection 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4 search">
+                                        <label>From</label>
+                                        <div class="input-group date">
+                                            <input type="datetime" class="form-control" date-time ng-model="sampleDate1" view="date" auto-close="true" min-view="date"
+                                                format="YYYY-MM-DD">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 search">
+                                        <label>To</label>
+                                        <div class="input-group date">
+                                            <input type="datetime" class="form-control" date-time ng-model="sampleDate2" view="date" auto-close="true" min-view="date"
+                                                format="YYYY-MM-DD">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                View Credit Card Payments
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="row chkbx">
+                                    <div class="checkbox checkbox-success">
+                                        <input id="checkbox2" type="checkbox">
+                                        <label for="checkbox2"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 command">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button class="btn">Clear</button>
+                                <button class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins alerts">
+            <div class="ibox-title">
+                <h5>Pending Transactions</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Trans. ID</th>
+                            <th>Trans. Date</th>
+                            <th>Trans. Time</th>
+                            <th>Class</th>
+                            <th>Trans. Type</th>
+                            <th>Description</th>
+                            <th>Card No</th>
+                            <th>Amount</th>
+                            <th>Review Required</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="a in [1,2,3,4]">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ibox float-e-margins alerts">
+            <div class="ibox-title">
+                <h5>Posted Transactions</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Trans. ID</th>
+                            <th>Trans. Date</th>
+                            <th>Trans. Time</th>
+                            <th>Class</th>
+                            <th>Trans. Type</th>
+                            <th>Description</th>
+                            <th>Card No</th>
+                            <th>Amount</th>
+                            <th>Review Required</th>
+                            <th>Option</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="a in [1,2,3,4]">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><a>Details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row"><br></div>
+    </div>
+</div>

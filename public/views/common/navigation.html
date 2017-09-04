@@ -52,7 +52,7 @@
             <li ng-class="{active: $state.includes('cardprogram')}">
                 <a><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardprogram')}">
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.details">Details</a></li>
+                    <li ui-sref-active="active"><a ui-sref="cardprogram.details"><i class="fa fa-list"></i><span class="nav-label">Details</span></a></li>
                     <li ui-sref-active="active"><a ui-sref="cardprogram.creditcard-rules">Credit Card Rules</a></li>
                     <li ui-sref-active="active"><a ui-sref="cardprogram.fraud">Fraud</a></li>
                     <li ui-sref-active="active"><a ui-sref="cardprogram.mcc-priviledges">MCC Privileges</a></li>
@@ -61,6 +61,18 @@
                     <li ui-sref-active="active"><a ui-sref="cardprogram.rewards">Rewards</a></li>
                     <li ui-sref-active="active"><a ui-sref="cardprogram.services">Services</a></li>
                 </ul>
+            </li>
+            <li ng-class="{active: $state.includes('transactions')}">
+                <a><i class="fa fa-exchange"></i> <span class="nav-label">{{ 'Transactions' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('transactions')}">
+                    <li ui-sref-active="active"><a ui-sref="transactions.details"><i class="fa fa-list"></i><span class="nav-label">Details</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="transactions.direct-deposits"></i><span class="nav-label">Direct Deposits</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="transactions.declined-transactions"></i><span class="nav-label">Declined Transactions</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="transactions.account-statements"></i><span class="nav-label">Account Statements</span></a></li>
+                </ul>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="main.admin-services"><i class="fa fa-handshake-o"></i> <span class="nav-label">{{ 'Administrative Services' | translate }}</span> </a>
             </li>
         </ul>
 

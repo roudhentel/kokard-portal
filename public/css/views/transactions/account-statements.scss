@@ -1,0 +1,35 @@
+.transactions-account-statements {
+    .wrapper-content {
+        .ibox-content {
+            .row {
+                margin-bottom: 1%;
+
+                .ibox-title {
+                    border-width: 1px 0 0;
+                }
+
+                .command {
+                    text-align: right;    
+                }
+
+                textarea {
+                    resize: none;
+                }
+
+                .search {
+                    display: flex;
+                    align-items: center;
+
+                    input[type="text"] {
+                        width: 80%;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .chkbx {
+                margin-left: 0;
+            }
+        }
+    }
+}

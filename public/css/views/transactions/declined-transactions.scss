@@ -1,0 +1,38 @@
+.declined-transactions {
+    .wrapper-content {
+        .ibox-content {
+            .row {
+                margin-bottom: 1%;
+
+                .ibox-title {
+                    border-width: 1px 0 0;
+                }
+
+                .command {
+                    text-align: right;    
+                }
+
+                textarea {
+                    resize: none;
+                }
+
+                .search {
+                    display: flex;
+                    align-items: center;
+
+                    label {
+                        margin-right: 10px;
+                    }
+
+                    .date, select {
+                        width: 70%;
+                    }
+                }
+            }
+
+            .chkbx {
+                margin-left: 0;
+            }
+        }
+    }
+}

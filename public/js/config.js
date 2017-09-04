@@ -355,10 +355,99 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        .state('transactions', {
+            abstract: true,
+            url: "/transactions",
+            templateUrl: "views/common/content.html",
+        })
+        .state('transactions.details', {
+            url: "/transactions-details",
+            templateUrl: "views/transactions/details.html",
+            data: { pageTitle: 'Transactions Details' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css', 'js/plugins/datapicker/angular-datepicker.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('transactions.direct-deposits', {
+            url: "/direct-deposits",
+            templateUrl: "views/transactions/direct-deposits.html",
+            data: { pageTitle: 'Direct Deposits' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css', 'js/plugins/datapicker/angular-datepicker.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('transactions.declined-transactions', {
+            url: "/declined-transactions",
+            templateUrl: "views/transactions/declined-transactions.html",
+            data: { pageTitle: 'Declined Transaction' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css', 'js/plugins/datapicker/angular-datepicker.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('transactions.account-statements', {
+            url: "/account-statements",
+            templateUrl: "views/transactions/account-statements.html",
+            data: { pageTitle: 'Account Statements' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css', 'js/plugins/datapicker/angular-datepicker.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('main.admin-services', {
+            url: "/admin-services",
+            templateUrl: "views/admin-services.html",
+            data: { pageTitle: 'Administrative Services' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+
+                    ]);
+                }
+            }
+        })
         .state('logins', {
             url: "/login",
             templateUrl: "views/login_two_columns.html",
-            data: { pageTitle: 'Login two columns', specialClass: 'gray-bg' }
+            data: { pageTitle: 'Login', specialClass: 'gray-bg' }
         })
         .state('register', {
             url: "/register",
