@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="css/views/others/calls-history.css">
+
+<div class="others-calls-history">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-10">
+            <h2>Calls History</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    Others
+                </li>
+                <li class="active">
+                    <strong>Calls History</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Search Call</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                Call Date
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-4 search">
+                                        <label>Recent Activity</label>
+                                        <select class="form-control">
+                                            <option value="0">Selection 1</option>
+                                            <option value="1">Selection 2</option>
+                                            <option value="2">Selection 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4 search">
+                                        <label>From</label>
+                                        <div class="input-group date">
+                                            <input type="datetime" class="form-control" date-time ng-model="sampleDate1" view="date" auto-close="true" min-view="date"
+                                                format="YYYY-MM-DD">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 search">
+                                        <label>To</label>
+                                        <div class="input-group date">
+                                            <input type="datetime" class="form-control" date-time ng-model="sampleDate2" view="date" auto-close="true" min-view="date"
+                                                format="YYYY-MM-DD">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="col-sm-2">Call Type</div>
+                            <div class="col-sm-4">
+                                <select class="form-control">
+                                    <option value="-1">Select Call Type</option>
+                                    <option value="0">Selection 1</option>
+                                    <option value="1">Selection 2</option>
+                                    <option value="2">Selection 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="col-sm-2">Call Status</div>
+                            <div class="col-sm-4">
+                                <select class="form-control">
+                                    <option value="-1">Select Call Status</option>
+                                    <option value="0">Selection 1</option>
+                                    <option value="1">Selection 2</option>
+                                    <option value="2">Selection 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="col-sm-2">FCR (First Call Resolution)</div>
+                            <div class="col-sm-4">
+                                <select class="form-control">
+                                    <option value="-1">Select FCR</option>
+                                    <option value="0">Selection 1</option>
+                                    <option value="1">Selection 2</option>
+                                    <option value="2">Selection 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 command">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button class="btn">Clear</button>
+                                <button class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins alerts">
+            <div class="ibox-title">
+                <h5>Received Calls List</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Call Date</th>
+                            <th>Call Time</th>
+                            <th>Call Type</th>
+                            <th>Call Status</th>
+                            <th>FCR</th>
+                            <th>Caller Name</th>
+                            <th>Comments</th>
+                            <th>CSR Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="a in [1,2,3,4]">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row"><br></div>
+    </div>
+</div>

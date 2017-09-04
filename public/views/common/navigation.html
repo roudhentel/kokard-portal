@@ -32,43 +32,165 @@
             <li ng-class="{active: $state.includes('card')}">
                 <a><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARD' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('card')}">
-                    <li ui-sref-active="active"><a ui-sref="card.details">{{'SUMMARY' | translate}}</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.cardholder-information">{{'CARDHOLDERINFORMATION' | translate}}</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.alerts-notifications">{{'ALERTSANDNOTIFICATIONS' | translate}}</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.creditcard-limits">{{'CREDITCARDLIMITS' | translate}}</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.creditcard-statement-cycle">{{'CCSTATEMENTCYCLE' | translate}}</a></li>
-                    <li ui-sref-active="active"><a ui-sref="card.supplementary-card">{{'SUPCARD' | translate}}</a></li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="card.details">
+                            <i class="fa" ng-class="$state.includes('card.details') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{'SUMMARY' | translate}}</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="card.cardholder-information">
+                            <i class="fa" ng-class="$state.includes('card.cardholder-information') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{'CARDHOLDERINFORMATION' | translate}}</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="card.alerts-notifications">
+                            <i class="fa" ng-class="$state.includes('card.alerts-notifications') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{'ALERTSANDNOTIFICATIONS' | translate}}</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="card.creditcard-limits">
+                            <i class="fa" ng-class="$state.includes('card.creditcard-limits') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{'CREDITCARDLIMITS' | translate}}</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="card.creditcard-statement-cycle">
+                            <i class="fa" ng-class="$state.includes('card.creditcard-statement-cycle') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{'CCSTATEMENTCYCLE' | translate}}</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="card.supplementary-card">
+                            <i class="fa" ng-class="$state.includes('card.supplementary-card') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{'SUPCARD' | translate}}</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="card.history">
+                            <i class="fa" ng-class="$state.includes('card.history') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{'History' | translate}}</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
 
             <li ng-class="{active: $state.includes('cardholder')}">
                 <a><i class="fa fa-user-circle"></i> <span class="nav-label">{{ 'CARDHOLDER' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardholder')}">
-                    <li ui-sref-active="active"><a ui-sref="cardholder.profile">Profile</a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardholder.cardby-memberid">Cards by Member Id</a></li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardholder.profile">
+                            <i class="fa" ng-class="$state.includes('cardholder.profile') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Profile</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardholder.cardby-memberid">
+                            <i class="fa" ng-class="$state.includes('cardholder.cardby-memberid') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Cards by Member Id</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
-
             <li ng-class="{active: $state.includes('cardprogram')}">
                 <a><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardprogram')}">
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.details"><i class="fa fa-list"></i><span class="nav-label">Details</span></a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.creditcard-rules">Credit Card Rules</a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.fraud">Fraud</a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.mcc-priviledges">MCC Privileges</a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.parameters">Parameters</a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.restrictions">Restrictions</a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.rewards">Rewards</a></li>
-                    <li ui-sref-active="active"><a ui-sref="cardprogram.services">Services</a></li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.details">
+                            <i class="fa" ng-class="$state.includes('cardprogram.details') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Details</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.creditcard-rules">
+                            <i class="fa" ng-class="$state.includes('cardprogram.creditcard-rules') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Credit Card Rules</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.fraud">
+                            <i class="fa" ng-class="$state.includes('cardprogram.fraud') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Fraud</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.mcc-priviledges">
+                            <i class="fa" ng-class="$state.includes('cardprogram.mcc-priviledges') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">MCC Privileges</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.parameters">
+                            <i class="fa" ng-class="$state.includes('cardprogram.parameters') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Parameters</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.restrictions">
+                            <i class="fa" ng-class="$state.includes('cardprogram.restrictions') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Restrictions</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.rewards">
+                            <i class="fa" ng-class="$state.includes('cardprogram.rewards') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Rewards</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="cardprogram.services">
+                            <i class="fa" ng-class="$state.includes('cardprogram.services') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Services</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li ng-class="{active: $state.includes('transactions')}">
                 <a><i class="fa fa-exchange"></i> <span class="nav-label">{{ 'Transactions' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('transactions')}">
-                    <li ui-sref-active="active"><a ui-sref="transactions.details"><i class="fa fa-list"></i><span class="nav-label">Details</span></a></li>
-                    <li ui-sref-active="active"><a ui-sref="transactions.direct-deposits"></i><span class="nav-label">Direct Deposits</span></a></li>
-                    <li ui-sref-active="active"><a ui-sref="transactions.declined-transactions"></i><span class="nav-label">Declined Transactions</span></a></li>
-                    <li ui-sref-active="active"><a ui-sref="transactions.account-statements"></i><span class="nav-label">Account Statements</span></a></li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="transactions.details">
+                            <i class="fa" ng-class="$state.includes('transactions.details') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Details</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="transactions.direct-deposits">
+                            <i class="fa" ng-class="$state.includes('transactions.direct-deposits') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Direct Deposits</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="transactions.declined-transactions">
+                            <i class="fa" ng-class="$state.includes('transactions.declined-transactions') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Declined Transactions</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="transactions.account-statements">
+                            <i class="fa" ng-class="$state.includes('transactions.account-statements') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Account Statements</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li ng-class="{active: $state.includes('others')}">
+                <a><i class="fa fa-ellipsis-h"></i> <span class="nav-label">{{ 'Others' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('others')}">
+                    <li ui-sref-active="active">
+                        <a ui-sref="others.calls-history">
+                            <i class="fa" ng-class="$state.includes('others.calls-history') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Calls History</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="others.change-reset-pin">
+                            <i class="fa" ng-class="$state.includes('others.change-reset-pin') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Change/Reset PIN</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li ui-sref-active="active">

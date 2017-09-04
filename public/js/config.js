@@ -199,6 +199,17 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        .state('card.history', {
+            url: "/history",
+            templateUrl: "views/card/history.html",
+            data: { pageTitle: 'History' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                    ]);
+                }
+            }
+        })
         .state('cardholder', {
             abstract: true,
             url: "/cardholder",
@@ -440,6 +451,37 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
 
+                    ]);
+                }
+            }
+        })
+        .state('others', {
+            abstract: true,
+            url: "/others",
+            templateUrl: "views/common/content.html",
+        })
+        .state('others.calls-history', {
+            url: "/calls-history",
+            templateUrl: "views/others/calls-history.html",
+            data: { pageTitle: 'Calls History' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css', 'js/plugins/datapicker/angular-datepicker.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('others.change-reset-pin', {
+            url: "/change-reset-pin",
+            templateUrl: "views/others/change-reset-pin.html",
+            data: { pageTitle: 'Change Reset PIN' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
                     ]);
                 }
             }
