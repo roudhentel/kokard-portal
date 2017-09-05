@@ -95,7 +95,7 @@
                 </ul>
             </li>
             <li ng-class="{active: $state.includes('cardprogram')}">
-                <a><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
+                <a><i class="fa fa-book"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardprogram')}">
                     <li ui-sref-active="active">
                         <a ui-sref="cardprogram.details">
@@ -189,6 +189,12 @@
                         <a ui-sref="others.change-reset-pin">
                             <i class="fa" ng-class="$state.includes('others.change-reset-pin') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Change/Reset PIN</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="others.block-close-card">
+                            <i class="fa" ng-class="$state.includes('others.block-close-card') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Block/Close Card</span>
                         </a>
                     </li>
                 </ul>

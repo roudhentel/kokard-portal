@@ -486,6 +486,23 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        .state('others.block-close-card', {
+            url: "/block-close-card",
+            templateUrl: "views/others/block-close-card.html",
+            data: { pageTitle: 'Block/Close Card' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            files: ['css/plugins/iCheck/custom.css', 'js/plugins/iCheck/icheck.min.js']
+                        }
+                    ]);
+                }
+            }
+        })
         .state('logins', {
             url: "/login",
             templateUrl: "views/login_two_columns.html",

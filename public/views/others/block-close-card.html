@@ -1,0 +1,224 @@
+<link rel="stylesheet" href="css/views/others/block-close-card.css">
+
+<div class="others-block-close-card">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-10">
+            <h2>Block or Close Card</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    Others
+                </li>
+                <li class="active">
+                    <strong>Block or Close Card</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Status</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Change Status To
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="radio radio-success">
+                                            <input id="radio1" type="radio" name="rdStatus">
+                                            <label for="radio1">Lost Card</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="checkbox checkbox-success">
+                                            <input id="chkLCNC" type="checkbox">
+                                            <label for="chkLCNC">Issue a New Card</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <div class="radio radio-success">
+                                    <input id="radio2" type="radio" name="rdStatus">
+                                    <label for="radio2">Close Card (The card will be closed permanently)</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="radio radio-success">
+                                            <input id="radio3" type="radio" name="rdStatus">
+                                            <label for="radio3">Stolen Card</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="checkbox checkbox-success">
+                                            <input id="chkSCNC" type="checkbox">
+                                            <label for="chkSCNC">Issue a New Card</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <div class="radio radio-success">
+                                    <input id="radio4" type="radio" name="rdStatus">
+                                    <label for="radio4">Fraud Block (The card will be blocked temporarily)</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="radio radio-success">
+                                    <input id="radio5" type="radio" name="rdStatus">
+                                    <label for="radio5">Block (Temporarily Inactive)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <div class="radio radio-success">
+                                    <input id="radio6" type="radio" name="rdStatus">
+                                    <label for="radio6">Un-Block Card (The card will be Un-Blocked)</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="checkbox checkbox-success">
+                                    <input id="chkFPUBC" type="checkbox">
+                                    <label for="chkFPUBC">Forced Post Un-Block Card</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="radio radio-success">
+                                    <input id="radio7" type="radio" name="rdStatus">
+                                    <label for="radio7">Restricted Card (Block only ATM Withdrawal(s))</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="radio radio-success">
+                                    <input id="radio8" type="radio" name="rdStatus">
+                                    <label for="radio8">Close All Cards (All cards of cardholder will be closed permanently)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Special Card Status</h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                Select Special Status
+                            </div>
+                            <div class="col-sm-7">
+                                <select class="form-control">
+                                    <option value="-1">Select Special Status</option>
+                                    <option value="0">No Special Status</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="ibox float-e-margins profile-setting">
+                            <div class="ibox-title">
+                                <h5>Triggering Actions</h5>
+                                <div ibox-tools></div>
+                            </div>
+                            <div class="ibox-content">
+                                No triggering action(s) are defined
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox float-e-margins profile-setting">
+            <div class="ibox-title">
+                <h5>Comments <span class="text-danger">*</span></h5>
+                <div ibox-tools></div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <textarea rows="5" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <button class="btn btn-primary">Update Status</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"><br></div>
+    </div>
+</div>
