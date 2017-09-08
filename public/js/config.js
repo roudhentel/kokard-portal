@@ -503,6 +503,28 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        .state('others.add-comments', {
+            url: "/add-comments",
+            templateUrl: "views/others/add-comments.html",
+            data: { pageTitle: 'Add Comments' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                    ]);
+                }
+            }
+        })
+        .state('others.apply-fee', {
+            url: "/apply-fee",
+            templateUrl: "views/others/apply-fee.html",
+            data: { pageTitle: 'Apply Fee' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                    ]);
+                }
+            }
+        })
         .state('logins', {
             url: "/login",
             templateUrl: "views/login_two_columns.html",
