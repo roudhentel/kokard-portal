@@ -525,6 +525,32 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        .state('others.close-a-call', {
+            url: "/close-a-call",
+            templateUrl: "views/others/close-a-call.html",
+            data: { pageTitle: 'Close a Call' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('others.link-external-card', {
+            url: "/link-external-card",
+            templateUrl: "views/others/link-external-card.html",
+            data: { pageTitle: 'Link External Card' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+
+                    ]);
+                }
+            }
+        })
         .state('logins', {
             url: "/login",
             templateUrl: "views/login_two_columns.html",
