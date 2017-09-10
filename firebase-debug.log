@@ -1,0 +1,31 @@
+[debug] [2017-09-10T13:28:33.362Z] ----------------------------------------------------------------------
+[debug] [2017-09-10T13:28:33.362Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\roudh\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-09-10T13:28:33.362Z] CLI Version:   3.9.2
+[debug] [2017-09-10T13:28:33.362Z] Platform:      win32
+[debug] [2017-09-10T13:28:33.362Z] Node Version:  v6.9.4
+[debug] [2017-09-10T13:28:33.362Z] Time:          Sun Sep 10 2017 21:28:33 GMT+0800 (China Standard Time)
+[debug] [2017-09-10T13:28:33.366Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-10T13:28:33.414Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-10T13:28:33.414Z] > authorizing via signed-in user
+[debug] [2017-09-10T13:28:33.417Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-09-10T13:28:33.417Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Ui4TQW3i1lM87CJMiehqC3ln4kBph10WjU84CNEk0HN830F1U3IwyM-ak1DxiN9_',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Sep 10 2017 21:28:33 GMT+0800 (China Standard Time)
+[debug] [2017-09-10T13:28:34.355Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-10T13:28:34.379Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ko-kard  
+ Sun Sep 10 2017 21:28:34 GMT+0800 (China Standard Time)
+[debug] [2017-09-10T13:28:36.294Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-10T13:28:36.294Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ko-kard/tokens  
+ Sun Sep 10 2017 21:28:36 GMT+0800 (China Standard Time)
+[debug] [2017-09-10T13:28:37.625Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ko-kard'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] [2017-09-10T13:28:53.571Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/ko-kard/uploads/-KtfyTKNPEtAzQWFptAt?fileCount=2460&message=  
+ Sun Sep 10 2017 21:28:53 GMT+0800 (China Standard Time)

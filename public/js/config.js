@@ -551,6 +551,52 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        .state('others.reissue-card', {
+            url: "/reissue-card",
+            templateUrl: "views/others/reissue-card.html",
+            data: { pageTitle: 'Reissue Card' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            files: ['css/plugins/iCheck/custom.css', 'js/plugins/iCheck/icheck.min.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('others.online-payment-activity', {
+            url: "/online-payment-activity",
+            templateUrl: "views/others/online-payment-activity.html",
+            data: { pageTitle: 'Link External Card' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+
+                    ]);
+                }
+            }
+        })
+        .state('others.upgrade-card', {
+            url: "/upgrade-card",
+            templateUrl: "views/others/upgrade-card.html",
+            data: { pageTitle: 'Upgrade Card' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            files: ['css/plugins/iCheck/custom.css', 'js/plugins/iCheck/icheck.min.js']
+                        }
+                    ]);
+                }
+            }
+        })
         .state('logins', {
             url: "/login",
             templateUrl: "views/login_two_columns.html",
