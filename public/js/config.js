@@ -28,7 +28,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('main.card-search', {
             url: "/card-search",
-            templateUrl: "views/card-search.html",
+            templateUrl: "views/search/card-search.html",
             data: { pageTitle: 'Card Search' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
@@ -36,6 +36,37 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                         {
                             files: ['js/controllers/card-search.js']
                         },
+                        {
+                            name: 'ui.knob',
+                            files: ['js/plugins/jsKnob/jquery.knob.js', 'js/plugins/jsKnob/angular-knob.js']
+                        },
+                        {
+                            files: ['css/plugins/ionRangeSlider/ion.rangeSlider.css', 'css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css', 'js/plugins/ionRangeSlider/ion.rangeSlider.min.js']
+                        },
+                        {
+                            insertBefore: '#loadBefore',
+                            name: 'localytics.directives',
+                            files: ['css/plugins/chosen/bootstrap-chosen.css', 'js/plugins/chosen/chosen.jquery.js', 'js/plugins/chosen/chosen.js']
+                        },
+                        {
+                            name: 'nouislider',
+                            files: ['css/plugins/nouslider/jquery.nouislider.css', 'js/plugins/nouslider/jquery.nouislider.min.js', 'js/plugins/nouslider/angular-nouislider.js']
+                        },
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css', 'js/plugins/datapicker/angular-datepicker.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('main.search-result', {
+            url: "/search-result",
+            templateUrl: "views/search/search-result.html",
+            data: { pageTitle: 'Card Search' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
                         {
                             name: 'ui.knob',
                             files: ['js/plugins/jsKnob/jquery.knob.js', 'js/plugins/jsKnob/angular-knob.js']
