@@ -34,11 +34,11 @@
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane active">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_1">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Card Program</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control">
+                                    <select class="form-control selectpicker" ng-model="searchFields.cardno.program" required>
                                         <option value="0">Selection 1</option>
                                         <option value="1">Selection 2</option>
                                         <option value="2">Selection 3</option>
@@ -49,21 +49,25 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Card Account Number</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.cardno.accountNumber" required>
                                     <!-- <span class="help-block m-b-none">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_1.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-2" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_2">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Role</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control">
+                                    <select class="form-control selectpicker" ng-model="searchFields.authcard.role" required>
                                         <option value="0">Selection 1</option>
                                         <option value="1">Selection 2</option>
                                         <option value="2">Selection 3</option>
@@ -74,203 +78,236 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">User ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.authcard.userId" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Card Number</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.authcard.cardNumber" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_2.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-3" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_3">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">User ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.user.id" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_3.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-4" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_4">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">SSN/NID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.ssnnid.id" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_4.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-5" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_5">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Card Reference Number</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.cardref.number" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_5.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-6" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_6">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Member ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.member.id" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_6.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-7" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" class="searchForm_7">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">First Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.callerInfo.fname" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Last Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.callerInfo.lname" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Home Phone Number</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.callerInfo.hphoneno" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Work Phone Number</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.callerInfo.wphoneno" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Mobile Phone Number</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.callerInfo.mphoneno" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Zip/Postal Code</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.callerInfo.zipcode" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">E-mail Address</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="email" class="form-control" ng-model="searchFields.callerInfo.email" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_7.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-8" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_8">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Business Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.business.name" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Federal Tax ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.business.fedTaxId" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Zip/Postal Code</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.business.zipcode" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Business Phone Number</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.business.phoneno" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Business Email</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="email" class="form-control" ng-model="searchFields.business.email" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_8.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-9" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_9">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Date of Birth</label>
                                 <div class="col-sm-10">
                                     <div class="input-group date">
                                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                        <input type="datetime" class="form-control" date-time ng-model="sampleDate" view="date" auto-close="true" min-view="date"
-                                            format="YYYY-MM-DD">
+                                        <input type="datetime" class="form-control" date-time ng-model="searchFields.dob.date" view="date" auto-close="true" min-view="date"
+                                            format="YYYY-MM-DD" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_9.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div id="tab-10" class="tab-pane">
                     <div class="panel-body">
-                        <form method="get" class="form-horizontal">
+                        <form method="get" class="form-horizontal" name="searchForm_10">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Customer ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" ng-model="searchFields.customer.id" required>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+                            <div class="command">
+                                <button class="btn btn-default" type="button" ng-click="clearSearchFields();">Clear</button>
+                                <button class="btn btn-primary" ng-click="search(searchForm_10.$valid);">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="command">
-                <button class="btn btn-default">Clear</button>
-                <button class="btn btn-primary" ui-sref="main.search-result">Search</button>
-            </div>
+
 
         </div>
     </div>

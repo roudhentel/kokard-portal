@@ -30,6 +30,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/card-search",
             templateUrl: "views/search/card-search.html",
             data: { pageTitle: 'Card Search' },
+            controller: 'cardSearchCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
