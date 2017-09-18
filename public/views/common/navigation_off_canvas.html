@@ -157,7 +157,7 @@
                 </ul>
             </li>
             <li ng-class="{active: $state.includes('commerce')}">
-                <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">{{ 'COMMERCE' | translate }}</span><span class="fa arrow"></span></a>
+                <a ><i class="fa fa-shopping-cart"></i> <span class="nav-label">{{ 'COMMERCE' | translate }}</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level" ng-class="{in: $state.includes('commerce')}">
                     <li ui-sref-active="active"><a ui-sref="commerce.products_grid">Products list (front)</a></li>
                     <li ui-sref-active="active"><a ui-sref="commerce.product_list">Product list (admin)</a></li>

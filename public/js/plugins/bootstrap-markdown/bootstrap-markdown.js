@@ -303,7 +303,7 @@
         }
 
         if (options.fullscreen.enable) {
-          editorHeader.append('<div class="md-controls"><a class="md-control md-control-fullscreen" href="#"><span class="'+this.__getIcon(options.fullscreen.icons.fullscreenOn)+'"></span></a></div>').on('click', '.md-control-fullscreen', function(e) {
+          editorHeader.append('<div class="md-controls"><a class="md-control md-control-fullscreen" ><span class="'+this.__getIcon(options.fullscreen.icons.fullscreenOn)+'"></span></a></div>').on('click', '.md-control-fullscreen', function(e) {
               e.preventDefault();
               instance.setFullscreen(true);
           });
@@ -446,7 +446,7 @@
 
       if (options.fullscreen.enable && options.fullscreen !== false) {
         this.$editor.append('<div class="md-fullscreen-controls">'
-                        + '<a href="#" class="exit-fullscreen" title="Exit fullscreen"><span class="' + this.__getIcon(options.fullscreen.icons.fullscreenOff) + '">'
+                        + '<a  class="exit-fullscreen" title="Exit fullscreen"><span class="' + this.__getIcon(options.fullscreen.icons.fullscreenOff) + '">'
                         + '</span></a>'
                         + '</div>');
         this.$editor.on('click', '.exit-fullscreen', function(e) {

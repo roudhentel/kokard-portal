@@ -97,6 +97,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/card",
             templateUrl: "views/common/content.html",
         })
+        .state('card.main', {
+            url: "/main",
+            templateUrl: "views/card/index.html",
+            data: { pageTitle: 'Card Details' }
+        })
         .state('card.details', {
             url: "/card-details",
             templateUrl: "views/card/card-details.html",
@@ -246,6 +251,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             abstract: true,
             url: "/cardholder",
             templateUrl: "views/common/content.html",
+        })
+        .state('cardholder.main', {
+            url: "/main",
+            templateUrl: "views/cardholder/index.html",
+            data: { pageTitle: 'Cardholder' }
         })
         .state('cardholder.profile', {
             url: "/cardholder-profile",

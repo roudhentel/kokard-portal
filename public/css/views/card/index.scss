@@ -1,0 +1,38 @@
+.card-main {
+    .ibox .ibox-title {
+        background: #ffffff;
+    }
+
+    .sub-menu {
+        height: 145px;
+        transition: all .4s;
+        cursor: pointer;
+
+        h5 {
+            font-size: 20pt;
+            color: #1ab394;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            .header-logo {
+                margin-right: 20pt;
+
+                i.fa {
+                    font-size: 21pt;
+                }
+            }
+
+            .description {
+                font-size: 12pt;
+            }
+        }
+
+        &:hover {
+            box-shadow: 1px 2px 9px #8e8e8e;
+        }
+    }
+}
