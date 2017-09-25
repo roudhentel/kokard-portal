@@ -330,8 +330,13 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/cardprogram",
             templateUrl: "views/common/content.html",
         })
+        .state('cardprogram.main', {
+            url: "/main",
+            templateUrl: "views/cardprogram/index.html",
+            data: { pageTitle: 'Card Program' }
+        })
         .state('cardprogram.details', {
-            url: "/cardprogram-details",
+            url: "/details",
             templateUrl: "views/cardprogram/details.html",
             data: { pageTitle: 'Card Program' },
             resolve: {
@@ -345,7 +350,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             }
         })
         .state('cardprogram.creditcard-rules', {
-            url: "/cardprogram-creditcard-rules",
+            url: "/creditcard-rules",
             templateUrl: "views/cardprogram/creditcard-rules.html",
             data: { pageTitle: 'Credit Card Rules' },
             resolve: {
@@ -359,7 +364,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             }
         })
         .state('cardprogram.fraud', {
-            url: "/cardprogram-fraud",
+            url: "/fraud",
             templateUrl: "views/cardprogram/fraud.html",
             data: { pageTitle: 'Fraud' },
             resolve: {
@@ -374,27 +379,27 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             controller: "fraudCtrl"
         })
         .state('cardprogram.mcc-priviledges', {
-            url: "/cardprogram-mcc-priviledges",
+            url: "/mcc-priviledges",
             templateUrl: "views/cardprogram/mcc-priviledges.html",
             data: { pageTitle: 'MCC Priviledges' }
         })
         .state('cardprogram.parameters', {
-            url: "/cardprogram-parameters",
+            url: "/parameters",
             templateUrl: "views/cardprogram/parameters.html",
             data: { pageTitle: 'Parameters' }
         })
         .state('cardprogram.restrictions', {
-            url: "/cardprogram-restrictions",
+            url: "/restrictions",
             templateUrl: "views/cardprogram/restrictions.html",
             data: { pageTitle: 'Restrictions' }
         })
         .state('cardprogram.rewards', {
-            url: "/cardprogram-rewards",
+            url: "/rewards",
             templateUrl: "views/cardprogram/rewards.html",
             data: { pageTitle: 'Rewards' }
         })
         .state('cardprogram.services', {
-            url: "/cardprogram-services",
+            url: "/services",
             templateUrl: "views/cardprogram/services.html",
             data: { pageTitle: 'Services' },
             controller: "servicesCtrl",
@@ -413,8 +418,13 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/transactions",
             templateUrl: "views/common/content.html",
         })
+        .state('transactions.main', {
+            url: "/main",
+            templateUrl: "views/transactions/index.html",
+            data: { pageTitle: 'Transactions' }
+        })
         .state('transactions.details', {
-            url: "/transactions-details",
+            url: "/details",
             templateUrl: "views/transactions/details.html",
             data: { pageTitle: 'Transactions Details' },
             resolve: {
@@ -501,6 +511,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             abstract: true,
             url: "/others",
             templateUrl: "views/common/content.html",
+        })
+        .state('others.main', {
+            url: "/main",
+            templateUrl: "views/others/index.html",
+            data: { pageTitle: 'Others' }
         })
         .state('others.calls-history', {
             url: "/calls-history",
