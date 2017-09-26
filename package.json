@@ -1,7 +1,7 @@
 {
   "name": "rdf-store-management",
   "version": "1.0.0",
-  "description": "Red Dragon Farm Store Management",
+  "description": "Ko-Kard Portal",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://roudhentelnagoy@bitbucket.org/roudhentelnagoy/rdfstoremanagement.git"
+    "url": "git+https://github.com/roudhentel/kokard-portal.git"
   },
   "author": "Roudhentel Nagoy",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/roudhentelnagoy/rdfstoremanagement#readme",
+  "homepage": "https://github.com/roudhentel/kokard-portal#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
