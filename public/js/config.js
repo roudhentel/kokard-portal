@@ -656,13 +656,25 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('logins', {
             url: "/login",
-            templateUrl: "views/login_two_columns.html",
+            templateUrl: "views/login.html",
             data: { pageTitle: 'Login', specialClass: 'gray-bg' }
         })
         .state('register', {
             url: "/register",
             templateUrl: "views/register.html",
-            data: { pageTitle: 'Register', specialClass: 'gray-bg' }
+            data: { pageTitle: 'Register', specialClass: 'gray-bg' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            files: ['css/plugins/iCheck/custom.css', 'js/plugins/iCheck/icheck.min.js']
+                        }
+                    ]);
+                }
+            }
         })
         .state('lockscreen', {
             url: "/lockscreen",
