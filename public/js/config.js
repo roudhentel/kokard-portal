@@ -495,18 +495,6 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
-        .state('main.admin-services', {
-            url: "/admin-services",
-            templateUrl: "views/admin-services.html",
-            data: { pageTitle: 'Administrative Services' },
-            resolve: {
-                loadPlugin: function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-
-                    ]);
-                }
-            }
-        })
         .state('others', {
             abstract: true,
             url: "/others",
@@ -650,6 +638,18 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                         {
                             files: ['css/plugins/iCheck/custom.css', 'js/plugins/iCheck/icheck.min.js']
                         }
+                    ]);
+                }
+            }
+        })
+        .state('others.admin-services', {
+            url: "/admin-services",
+            templateUrl: "views/others/admin-services.html",
+            data: { pageTitle: 'Administrative Services' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+
                     ]);
                 }
             }

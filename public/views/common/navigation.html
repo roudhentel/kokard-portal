@@ -239,10 +239,13 @@
                             <span class="nav-label">Upgrade Card</span>
                         </a>
                     </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="others.admin-services">
+                            <i class="fa" ng-class="$state.includes('others.admin-services') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">{{ 'Administrative Services' | translate }}</span>
+                        </a>
+                    </li>
                 </ul>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="main.admin-services"><i class="fa fa-handshake-o"></i> <span class="nav-label">{{ 'Administrative Services' | translate }}</span> </a>
             </li>
         </ul>
 
