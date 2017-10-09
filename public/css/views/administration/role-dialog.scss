@@ -1,3 +1,5 @@
+@import '../../mixin.scss';
+
 .role-dialog {
     width: 767px;
 
@@ -11,6 +13,10 @@
         .display-view {
             overflow: auto;
             height: 500px;
+
+            @include respond-to(xlg) {
+                height: 400px;
+            }
     
             .table {
                 thead {

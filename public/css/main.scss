@@ -1,3 +1,5 @@
+@import 'mixin.scss';
+
 @font-face {
     font-family: 'HelveticaLT57';
     src: url("font/HelveticaNeueLTStd-Cn.otf") format("opentype");
@@ -47,6 +49,10 @@ body {
 
 md-backdrop.md-dialog-backdrop {
     z-index: 3000;
+}
+
+md-dialog {
+    overflow: hidden;
 }
 
 .md-dialog-container {
