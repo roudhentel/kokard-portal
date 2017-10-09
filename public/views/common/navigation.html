@@ -247,6 +247,23 @@
                     </li>
                 </ul>
             </li>
+            <li ng-class="{active: $state.includes('administration')}">
+                <a><i class="fa fa-lock"></i> <span class="nav-label">Administration</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('administration')}">
+                    <li ui-sref-active="active">
+                        <a ui-sref="administration.roles">
+                            <i class="fa" ng-class="$state.includes('administration.roles') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Roles</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="administration.users">
+                            <i class="fa" ng-class="$state.includes('administration.users') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
+                            <span class="nav-label">Users</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
 
     </div>

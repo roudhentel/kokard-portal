@@ -1,5 +1,5 @@
 angular
-    .module('inspinia')
+    .module('koKard')
     .controller('searchPageCtrl', function ($scope, $state) {
         setTimeout(function () {
             toastrConfig.closeButton = true;

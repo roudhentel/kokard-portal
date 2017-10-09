@@ -1,0 +1,47 @@
+.administration-roles {
+    .wrapper-content {
+
+        .ibox-content {
+            .row {
+                margin-bottom: 1%;
+
+                .ibox-title {
+                    border-width: 1px 0 0;
+                }
+            }
+
+            textarea {
+                resize: none;
+            }
+        }
+    }
+    
+    .table {
+        thead {
+            tr {
+                th {
+                    text-align: center;
+                    
+                    &:first-child {
+                        width: 100px;
+                    }
+                    &:nth-child(2) {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .command {
+        text-align: right;    
+    }
+}

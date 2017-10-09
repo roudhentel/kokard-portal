@@ -1,0 +1,47 @@
+.administration-users {
+    .wrapper-content {
+
+        .ibox-content {
+            .row {
+                margin-bottom: 1%;
+
+                .ibox-title {
+                    border-width: 1px 0 0;
+                }
+            }
+
+            textarea {
+                resize: none;
+            }
+        }
+    }
+
+    .table {
+        thead {
+            tr {
+                th {
+                    text-align: center;
+                    
+                    &:first-child {
+                        width: 100px;
+                    }
+                    &:last-child {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+    .command {
+        text-align: right;    
+    }
+}

@@ -6,7 +6,10 @@
  * Initial there are written state for all view in theme.
  *
  */
-function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdleProvider, KeepaliveProvider) {
+function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdleProvider, KeepaliveProvider, $qProvider) {
+
+    // handle rejection settings
+    $qProvider.errorOnUnhandledRejections(false);
 
     // Configure Idle settings
     IdleProvider.idle(5); // in seconds
@@ -654,6 +657,27 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        .state('administration', {
+            abstract: true,
+            url: "/administration",
+            templateUrl: "views/common/content.html",
+        })
+        .state('administration.main', {
+            url: "/main",
+            templateUrl: "views/administration/index.html",
+            data: { pageTitle: 'Administration' }
+        })
+        .state('administration.roles', {
+            url: "/roles",
+            templateUrl: "views/administration/roles.html",
+            data: { pageTitle: 'Roles' },
+            controller: "rolesCtrl"
+        })
+        .state('administration.users', {
+            url: "/users",
+            templateUrl: "views/administration/users.html",
+            data: { pageTitle: 'Users' }
+        })
         .state('logins', {
             url: "/login",
             templateUrl: "views/login.html",
@@ -699,7 +723,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
 
 }
 angular
-    .module('inspinia')
+    .module('koKard')
     .config(config)
     .run(function ($rootScope, $state) {
         $rootScope.$state = $state;

@@ -1,4 +1,4 @@
-angular.module('inspinia').controller('servicesCtrl', function ($scope) {
+angular.module('koKard').controller('servicesCtrl', function ($scope) {
     var s = $scope;
 
     s.services = [

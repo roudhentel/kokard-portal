@@ -613,7 +613,7 @@ function passwordMeter() {
  * Pass all functions into module
  */
 angular
-    .module('inspinia')
+    .module('koKard')
     .directive('pageTitle', pageTitle)
     .directive('sideNavigation', sideNavigation)
     .directive('iboxTools', iboxTools)

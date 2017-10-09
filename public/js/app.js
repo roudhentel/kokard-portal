@@ -3,14 +3,15 @@
  *
  */
 (function () {
-    angular.module('inspinia', [
+    angular.module('koKard', [
         'ui.router',                    // Routing
         'oc.lazyLoad',                  // ocLazyLoad
         'ui.bootstrap',                 // Ui Bootstrap
         'pascalprecht.translate',       // Angular Translate
         'ngIdle',                       // Idle timer
         'ngSanitize',                   // ngSanitize
-        'toastr'                       // toaster
+        'toastr',                       // toaster
+        'ngMaterial'                    // material
     ])
 })();
 

@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="css/views/administration/roles.css">
+
+<div class="administration-roles">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-10">
+            <h2>Roles</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a>Home</a>
+                </li>
+                <li>
+                    <a ui-sref="administration.main">Administration</a>
+                </li>
+                <li class="active">
+                    <strong>Roles</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox float-e-margins profile-setting">
+
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <div class="col-sm-8">
+                                <button class="btn btn-primary" ng-click="showDialog(0, $event);">Add <i class="fa fa-plus-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Actions</th>
+                                    <th>Name</th>
+                                    <th>Permissions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="a in [1,2,3,4]">
+                                    <td>
+                                        <a><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
+                                        <a><i class="fa fa-trash"></i></a>
+                                    </td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"><br></div>
+    </div>
+</div>

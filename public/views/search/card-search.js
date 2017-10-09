@@ -1,4 +1,4 @@
-angular.module('inspinia').controller('cardSearchCtrl', function ($scope, $state) {
+angular.module('koKard').controller('cardSearchCtrl', function ($scope, $state) {
     let s = $scope;
 
     s.searchFields = {

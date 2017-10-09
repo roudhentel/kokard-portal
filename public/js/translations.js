@@ -88,5 +88,5 @@ function config($translateProvider) {
 }
 
 angular
-    .module('inspinia')
+    .module('koKard')
     .config(config)

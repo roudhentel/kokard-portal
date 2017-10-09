@@ -1,4 +1,4 @@
-angular.module('inspinia').controller('fraudCtrl', function ($scope) {
+angular.module('koKard').controller('fraudCtrl', function ($scope) {
     var s = $scope;
 
     s.units = [
