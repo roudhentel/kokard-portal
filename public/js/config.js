@@ -671,12 +671,25 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/roles",
             templateUrl: "views/administration/roles.html",
             data: { pageTitle: 'Roles' },
-            controller: "rolesCtrl"
+            controller: "rolesCtrl",
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            files: ['css/plugins/iCheck/custom.css', 'js/plugins/iCheck/icheck.min.js']
+                        }
+                    ]);
+                }
+            }
         })
         .state('administration.users', {
             url: "/users",
             templateUrl: "views/administration/users.html",
-            data: { pageTitle: 'Users' }
+            data: { pageTitle: 'Users' },
+            controller: "usersCtrl"
         })
         .state('logins', {
             url: "/login",

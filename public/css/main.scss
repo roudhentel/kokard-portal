@@ -45,6 +45,14 @@ body {
     }
 }
 
+md-backdrop.md-dialog-backdrop {
+    z-index: 3000;
+}
+
+.md-dialog-container {
+    z-index: 3001;
+}
+
 .loginscreen.middle-box {
     width: 500px;
 

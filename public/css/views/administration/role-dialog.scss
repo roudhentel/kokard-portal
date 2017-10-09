@@ -4,4 +4,37 @@
     .modal-title {
         font-size: 15pt;
     }
+
+    .modal-body {
+        padding: 15px;
+
+        .display-view {
+            overflow: auto;
+            height: 500px;
+    
+            .table {
+                thead {
+                    tr {
+                        th {
+                            &:first-child {
+                                width: 350px;
+                            }
+                        }
+                    }
+                }
+        
+                tbody {
+                    tr {
+                        td {
+                            text-align: left;
+        
+                            &:first-child {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

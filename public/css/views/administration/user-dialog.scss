@@ -1,0 +1,15 @@
+.user-dialog {
+    width: 400px;
+
+    .modal-title {
+        font-size: 15pt;
+    }
+
+    .modal-body {
+        padding: 15px;
+
+        .row {
+            margin-bottom: 10px;
+        }   
+    }
+}
