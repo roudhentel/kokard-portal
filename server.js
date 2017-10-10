@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+let roleRoute = require('./server/routes/role');
+app.use('/api/role', roleRoute);
+
 // start with index.html
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/');

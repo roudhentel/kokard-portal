@@ -1,0 +1,11 @@
+{
+    "user": "sa",
+    "password": "Nagoy12345!",
+    "server": "localhost",
+    "database": "kokard",
+    "pool": {
+        "max": 10,
+        "min": 0,
+        "idleTimeoutMillis": 30000
+    }
+}
