@@ -47,12 +47,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="a in [1,2,3,4]">
+                                <tr ng-repeat="a in rolePage.listRoles">
                                     <td>
-                                        <a><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
-                                        <a><i class="fa fa-trash"></i></a>
+                                        <a ng-click="edit(a, $event);"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
+                                        <a ng-click="delete(a, $event);"><i class="fa fa-trash"></i></a>
                                     </td>
-                                    <td>-</td>
+                                    <td>{{a.name}}</td>
                                     <td>-</td>
                                 </tr>
                             </tbody>

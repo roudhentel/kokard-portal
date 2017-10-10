@@ -1,58 +1,61 @@
 <link rel="stylesheet" href="css/views/administration/user-dialog.css">
 
 <dialog-template title="{{dialogTitle}}" add-class="user-dialog" md-no-ink>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <div class="col-md-5">
-                    Username
-                </div>
-                <div class="col-md-7">
-                    <input type="text" class="form-control" placeholder="Desired Username">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <div class="col-md-5">
-                    Password
-                </div>
-                <div class="col-md-7">
-                    <input type="password" class="form-control">
+    <form name="formUser">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="col-md-5">
+                        Username
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" placeholder="Desired Username" required ng-model="user.username">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <div class="col-md-5">
-                    Re-Type Password
-                </div>
-                <div class="col-md-7">
-                    <input type="password" class="form-control">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="col-md-5">
+                        Password
+                    </div>
+                    <div class="col-md-7">
+                        <input type="password" class="form-control" required ng-model="user.password">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <div class="col-md-5">
-                    Role
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="col-md-5">
+                        Re-Type Password
+                    </div>
+                    <div class="col-md-7">
+                        <input type="password" class="form-control" required ng-model="user.retypepassword">
+                    </div>
                 </div>
-                <div class="col-md-7">
-                    <select class="form-control"> 
-                        <option value="0">Select Role</option>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="col-md-5">
+                        Role
+                    </div>
+                    <div class="col-md-7">
+                        <select class="form-control" ng-model="user.roleId" ng-options="role.id as role.name for role in userDialog.listRole" ng-change="updateRole();"> 
+                        
                     </select>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" ng-click="save();">Save</button>
-        <button type="button" class="btn btn-default" ng-click="closeDialog();">Close</button>
-    </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" ng-click="save(formUser.$valid, $event);">Save</button>
+            <button type="button" class="btn btn-default" ng-click="closeDialog();">Close</button>
+        </div>
+    </form>
+
 </dialog-template>

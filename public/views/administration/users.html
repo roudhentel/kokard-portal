@@ -48,14 +48,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="a in [1,2,3,4]">
+                                <tr ng-repeat="a in usersPage.listUser">
                                     <td>
-                                        <a><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
-                                        <a><i class="fa fa-trash"></i></a>
+                                        <a ng-click="edit(a, $event);"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
+                                        <a ng-click="delete(a, $event);"><i class="fa fa-trash"></i></a>
                                     </td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td></td>
+                                    <td>{{a.username}}</td>
+                                    <td>{{a.roleName}}</td>
+                                    <td>{{a.isActive}}</td>
                                 </tr>
                             </tbody>
                         </table>
