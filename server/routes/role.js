@@ -6,8 +6,11 @@ function RoleRoute() {
 
     router.get('/', function (request, response) {
         // get all roles
-        dbSvc.connect();
-        response.status(200).json({ success: true });
+        var params = [{ paramName: "query", paramValue: "r" }];
+        dbSvc.executeSelectProcedure("[dbo].[role_select]", params, function (err, res) {
+            response.status(200).json(res);
+        });
+
     });
 
     router.post('/', function (request, response) {

@@ -3,24 +3,33 @@ let sql = require('mssql');
 
 function DatabaseService() {
     var dbSvc = {
-        connect: function () {
-            sql.connect(config, function (err) {
-                if (err) console.log(err);
+        executeSelectProcedure: function (procname, params, callback) {
+            let connection = new sql.ConnectionPool(config);
+            connection.connect(function (error) {
+                var request = new sql.Request(connection);
+                params.forEach(el => {
+                    request.input(el.paramName, el.paramValue);
+                });
 
-                // create Request object
-                var request = new sql.Request();
-
-                // query to the database and get the records
-                request.query('select * from roles', function (err, recordset) {
-
-                    if (err) console.log(err)
-
-                    // send records as a response
-                    console.log(recordset);
-
+                request.execute(procname, function (err, rs) {
+                    callback(err, rs["recordset"]);
+                    connection.close();
                 });
             });
+        },
+        executeInsertProcedure: function (proccname, params, callback) {
+            let connection = new sql.ConnectionPool(config);
+            connection.connect(function (error) {
+                var request = new sql.Request(connection);
+                params.forEach(el => {
+                    request.input(el.paramName, el.paramValue);
+                });
 
+                request.execute(procname, function (err, rs) {
+                    callback(err, rs);
+                    connection.close();
+                });
+            });
         }
     }
 
