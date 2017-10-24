@@ -694,7 +694,8 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('logins', {
             url: "/login",
             templateUrl: "views/login.html",
-            data: { pageTitle: 'Login', specialClass: 'gray-bg' }
+            data: { pageTitle: 'Login', specialClass: 'gray-bg' },
+            controller: "loginCtrl"
         })
         .state('register', {
             url: "/register",

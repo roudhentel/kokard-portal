@@ -14,6 +14,7 @@ document.write('<script src="views/administration/roles.js"></script>');        
 document.write('<script src="views/administration/users.js"></script>');                    // users controller
 document.write('<script src="views/administration/role-dialog.js"></script>');              // role dialog controller
 document.write('<script src="views/administration/user-dialog.js"></script>');              // user dialog controller
+document.write('<script src="views/login.js"></script>');                                   // login controller
 
 // services
 document.write('<script src="js/services/dialog.js"></script>');                            // dialog service

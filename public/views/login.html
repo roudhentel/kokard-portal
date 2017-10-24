@@ -9,7 +9,8 @@
             </p>
 
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
             </p>
 
             <p>
@@ -23,16 +24,17 @@
         </div>
         <div class="col-md-6">
             <div class="ibox-content">
-                <form class="m-t" role="form">
-                    <div class="form-group" name="loginForm">
-                        <input type="email" class="form-control" placeholder="Username" required="">
+                <form class="m-t" name="loginForm">
+                    <div class="form-group">
+                        <!-- <input type="email" class="form-control" placeholder="Username" required> -->
+                        <input type="text" class="form-control" ng-model="loginPage.username" required placeholder="Username/Email">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" required="">
+                        <input type="password" class="form-control" ng-model="loginPage.password" required>
                     </div>
-                    <button id="btnLogin" type="submit" class="btn btn-primary block full-width m-b" ui-sref="main.card-search">Login</button>
+                    <button id="btnLogin" type="submit" class="btn btn-primary block full-width m-b" ng-click="login(loginForm.$valid);">Login</button>
 
-                    <a ui-sref="forgot_password" >
+                    <a ui-sref="forgot_password">
                         <small>Forgot password?</small>
                     </a>
 

@@ -14,6 +14,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 let roleRoute = require('./server/routes/role');
 app.use('/api/role', roleRoute);
 
+let userRoute = require('./server/routes/user');
+app.use('/api/user', userRoute);
+
 // start with index.html
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/');
