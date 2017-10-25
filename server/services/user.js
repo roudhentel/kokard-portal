@@ -36,11 +36,11 @@ function UserService() {
         add: function (params, callback) {
             let s = this;
             bcrypt.genSalt(saltRounds, function (err, salt) {
-                bcrypt.hash(params.password, salt, function (err, hash) {
+                bcrypt.hash(params.Password, salt, function (err, hash) {
                     if (err) {
                         s.finishTransaction(err, undefined, callback);
                     } else {
-                        params.password = hash;
+                        params.Password = hash;
                         dbSvc.executeInsertProcedure("[dbo].[user_add]", params, function (err, res) {
                             s.finishTransaction(err, res, callback);
                         });

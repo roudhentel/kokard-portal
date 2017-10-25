@@ -3,7 +3,8 @@ angular.module('koKard').controller('loginCtrl', function ($scope, $http, $state
 
     s.loginPage = {
         username: "",
-        password: ""
+        password: "",
+        isLoginFailed: false
     }
 
     s.login = function (isFormValid) {
@@ -15,10 +16,14 @@ angular.module('koKard').controller('loginCtrl', function ($scope, $http, $state
             data: s.loginPage
         }).then(function (res) {
             if (res.data.success) {
+                s.gbl.token = res.data.token;
+                localStorage.setItem("x-access-token", res.data.token);
+                s.loginPage.isLoginFailed = false;
                 $state.go('main.card-search');
             }
         }, function (err) {
             console.log(err);
+            s.loginPage.isLoginFailed = true;
         })
     }
 });

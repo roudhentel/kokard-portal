@@ -1,29 +1,26 @@
-angular.module('koKard').controller('usersCtrl', function ($scope, Dialog) {
+angular.module('koKard').controller('usersCtrl', function ($scope, $http, Dialog) {
     let s = $scope;
     let dialogSvc = new Dialog();
 
     s.usersPage = {
-        listUser: [
-            {
-                username: "user1",
-                roleId: 1,
-                roleName: "Role 1",
-                isActive: 1
-            },
-            {
-                username: "user2",
-                roleId: 2,
-                roleName: "Role 2",
-                isActive: 1
-            },
-            {
-                username: "user3",
-                roleId: 3,
-                roleName: "Role 3",
-                isActive: 1
-            }
-        ]
+        listUser: []
     };
+
+    s.getAllUsers = function () {
+        $http({
+            method: "GET",
+            url: "/api/user",
+            headers: {
+                'x-access-token': s.gbl.token
+            }
+        }).then(function (res) {
+            if (res.data.success) {
+                s.usersPage.listUser = res.data.rows;
+            }
+        }, function (err) {
+            console.log(err);
+        });
+    }();
 
     s.showDialog = function (action, ev) {
         switch (action) {
@@ -42,6 +39,7 @@ angular.module('koKard').controller('usersCtrl', function ($scope, Dialog) {
                 if (res) {
                     switch (action) {
                         case 0: { // add event
+                            console.log(res);
                             s.usersPage.listUser.push(res);
                             break;
                         }
@@ -60,12 +58,27 @@ angular.module('koKard').controller('usersCtrl', function ($scope, Dialog) {
     }
 
     s.delete = function (item, ev) {
-        dialogSvc.showConfirm("Confirmation", ("Are you sure you want to delete user: " + item.username), "Yes", "No", false, "parent", ev)
+        dialogSvc.showConfirm("Confirmation", ("Are you sure you want to delete user: " + item.Username), "Yes", "No", false, "parent", ev)
             .then(function (res) {
                 if (res) {
-                    s.usersPage.listUser.splice(s.usersPage.listUser.indexOf(item), 1);
+                    $http({
+                        method: "DELETE",
+                        url: "/api/user",
+                        params: {
+                            Id: item.Id
+                        },
+                        headers: {
+                            'x-access-token': s.gbl.token
+                        }
+                    }).then(function (res) {
+                        if (res.data.success) {
+                            s.usersPage.listUser.splice(s.usersPage.listUser.indexOf(item), 1);
+                            dialogSvc.showAlert("Information", "Successfully Deleted", "Ok", true, "parent", ev);
+                        }
+                    }, function (err) {
+                        console.log(err);
+                    });
 
-                    dialogSvc.showAlert("Information", "Successfully Deleted", "Ok", true, "parent", ev);
                 }
             });
     }

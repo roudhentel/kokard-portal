@@ -9,31 +9,31 @@
                         Username
                     </div>
                     <div class="col-md-7">
-                        <input type="text" class="form-control" placeholder="Desired Username" required ng-model="user.username">
+                        <input type="text" class="form-control" placeholder="Desired Username" required ng-model="user.Username">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" ng-if="!isEdit">
             <div class="col-md-12">
                 <div class="form-group">
                     <div class="col-md-5">
                         Password
                     </div>
                     <div class="col-md-7">
-                        <input type="password" class="form-control" required ng-model="user.password">
+                        <input type="password" class="form-control" required ng-model="user.Password">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" ng-if="!isEdit">
             <div class="col-md-12">
                 <div class="form-group">
                     <div class="col-md-5">
                         Re-Type Password
                     </div>
                     <div class="col-md-7">
-                        <input type="password" class="form-control" required ng-model="user.retypepassword">
+                        <input type="password" class="form-control" required ng-model="user.RetypePassword">
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         Role
                     </div>
                     <div class="col-md-7">
-                        <select class="form-control" ng-model="user.roleId" ng-options="role.id as role.name for role in userDialog.listRole" ng-change="updateRole();"> 
+                        <select class="form-control" ng-model="user.RoleId" ng-options="role.id as role.name for role in userDialog.listRole" ng-change="updateRole();"> 
                         
                     </select>
                     </div>

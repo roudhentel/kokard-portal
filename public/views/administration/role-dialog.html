@@ -9,7 +9,8 @@
                         <label class="control-label">Name</label>
                     </div>
                     <div class="col-lg-9">
-                        <input type="text" class="form-control" ng-model="role.name" required>
+                        <input type="text" class="form-control" ng-model="role.name" required ng-if="!isView">
+                        <label ng-if="isView">{{role.name}}</label>
                     </div>
                 </div>
             </div>
@@ -30,28 +31,28 @@
                                 <div class="row">
                                     <div class="col-lg-3">
                                         <div class="checkbox checkbox-primary">
-                                            <input id="chkView{{$index}}" type="checkbox" ng-click="changePermission(a, $index);">
+                                            <input id="chkView{{$index}}" type="checkbox" ng-click="changePermission(a, $index);" ng-disabled="isView">
                                             <label for="chkView{{$index}}">View</label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-3">
                                         <div class="checkbox checkbox-success">
-                                            <input id="chkAdd{{$index}}" type="checkbox" ng-click="changePermission(a, $index);">
+                                            <input id="chkAdd{{$index}}" type="checkbox" ng-click="changePermission(a, $index);" ng-disabled="isView">
                                             <label for="chkAdd{{$index}}">Add</label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-3">
                                         <div class="checkbox checkbox-warning">
-                                            <input id="chkEdit{{$index}}" type="checkbox" ng-click="changePermission(a, $index);">
+                                            <input id="chkEdit{{$index}}" type="checkbox" ng-click="changePermission(a, $index);" ng-disabled="isView">
                                             <label for="chkEdit{{$index}}">Edit</label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-3">
                                         <div class="checkbox checkbox-danger">
-                                            <input id="chkDelete{{$index}}" type="checkbox" ng-click="changePermission(a, $index);">
+                                            <input id="chkDelete{{$index}}" type="checkbox" ng-click="changePermission(a, $index);" ng-disabled="isView">
                                             <label for="chkDelete{{$index}}">Delete</label>
                                         </div>
                                     </div>
@@ -65,7 +66,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" ng-click="save(formRole.$valid);">Save</button>
+            <button type="submit" class="btn btn-primary" ng-click="save(formRole.$valid);" ng-if="!isView">Save</button>
             <button type="button" class="btn btn-default" ng-click="closeDialog();">Close</button>
         </div>
     </form>

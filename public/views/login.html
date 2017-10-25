@@ -33,11 +33,13 @@
                         <input type="password" class="form-control" ng-model="loginPage.password" required>
                     </div>
                     <button id="btnLogin" type="submit" class="btn btn-primary block full-width m-b" ng-click="login(loginForm.$valid);">Login</button>
+                    <div class="sub-info">
+                        <a ui-sref="forgot_password">
+                            <small>Forgot password?</small>
+                        </a>
 
-                    <a ui-sref="forgot_password">
-                        <small>Forgot password?</small>
-                    </a>
-
+                        <small class="msg" ng-if="loginPage.isLoginFailed">Invalid Username or Password!</small>
+                    </div>
                     <p class="text-muted text-center">
                         <small>Do not have an account?</small>
                     </p>

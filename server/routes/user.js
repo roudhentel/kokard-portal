@@ -65,7 +65,7 @@ function UserRoute() {
 
     router.put('/', function (request, response) {
         // edit user
-        var params = request.body.params;
+        var params = request.body;
         userSvc.edit(params, function (result) {
             response.status(result.status).json(result.details);
         });
@@ -73,7 +73,7 @@ function UserRoute() {
 
     router.delete('/', function (request, response) {
         // delete user
-        var params = { id: request.query.id || 0 };
+        var params = { Id: request.query.Id || 0 };
         userSvc.delete(params, function (result) {
             response.status(result.status).json(result.details);
         });

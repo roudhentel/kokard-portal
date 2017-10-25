@@ -14,7 +14,7 @@ function RoleRoute() {
 
     router.post('/', function (request, response) {
         // add role
-        var params = request.body.params;
+        var params = request.body;
         roleSvc.add(params, function (result) {
             response.status(result.status).json(result.details);
         });
@@ -22,7 +22,7 @@ function RoleRoute() {
 
     router.put('/', function (request, response) {
         // edit role
-        var params = request.body.params;
+        var params = request.body;
         roleSvc.edit(params, function (result) {
             response.status(result.status).json(result.details);
         });
@@ -30,7 +30,7 @@ function RoleRoute() {
 
     router.delete('/', function (request, response) {
         // delete role
-        var params = { id: request.query.id || 0 };
+        var params = { Id: request.query.Id || 0 };
         roleSvc.delete(params, function (result) {
             response.status(result.status).json(result.details);
         });

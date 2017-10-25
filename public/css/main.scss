@@ -66,3 +66,16 @@ md-dialog {
         font-size: 145px;
     }
 }
+
+.loginColumns {
+    .sub-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        small.msg {
+            color: #F00;
+            font-style: italic;
+        }
+    }
+}

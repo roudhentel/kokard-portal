@@ -62,6 +62,15 @@ function MainCtrl($scope, $mdDialog, $http, toastr, toastrConfig) {
     s.closeDialog = function () {
         $mdDialog.hide();
     }
+
+    s.gbl = {
+        token: ""
+    }
+
+    if (localStorage.getItem("x-access-token")) {
+        s.gbl.token = localStorage.getItem("x-access-token");
+    };
+
 };
 
 
