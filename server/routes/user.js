@@ -24,14 +24,22 @@ function UserRoute() {
         });
     });
 
+    router.post('/', function (request, response) {
+        // add user
+        var params = request.body;
+        userSvc.add(params, function (result) {
+            response.status(result.status).json(result.details);
+        });
+    });
+
     router.use(function (req, res, next) {
         var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
         if (token) {
             jwt.verify(token, config.secret, function (err, decoded) {
                 if (err) {
-                    return res.json({
-                        success: false,
+                    return res.status(500).json({
+                        tokenError: true,
                         message: 'Failed to authenticate token'
                     });
                 } else {
@@ -40,8 +48,8 @@ function UserRoute() {
                 }
             });
         } else {
-            return res.status(403).json({
-                success: false,
+            return res.status(500).json({
+                tokenError: false,
                 message: 'No token provided'
             });
         }
@@ -51,14 +59,6 @@ function UserRoute() {
         // get all users
         var params = { query: request.query.searchStr || "" };
         userSvc.get(params, function (result) {
-            response.status(result.status).json(result.details);
-        });
-    });
-
-    router.post('/', function (request, response) {
-        // add user
-        var params = request.body;
-        userSvc.add(params, function (result) {
             response.status(result.status).json(result.details);
         });
     });

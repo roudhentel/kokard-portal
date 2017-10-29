@@ -44,6 +44,12 @@ angular.module("koKard").controller("userDialogCtrl", function ($scope, Dialog, 
                 s.userDialog.listRole = newArr;
             }
         }, function (err) {
+            if (err.data.tokenError) {
+                dialogSvc.showAlert("Information", "Token expired", "Ok", true, "parent", undefined)
+                    .then(function (res) {
+                        $state.go('logins');
+                    });
+            }
             console.log(err);
         });
     }
@@ -75,14 +81,11 @@ angular.module("koKard").controller("userDialogCtrl", function ($scope, Dialog, 
         }
 
         if (!s.isEdit) {
-            // add
+            // add - no token needed when adding user
             $http({
                 method: "POST",
                 url: "/api/user",
-                data: newUser,
-                headers: {
-                    'x-access-token': s.gbl.token
-                }
+                data: newUser
             }).then(function (res) {
                 if (res.data.success) {
                     s.user = res.data.rows[0];
@@ -113,6 +116,12 @@ angular.module("koKard").controller("userDialogCtrl", function ($scope, Dialog, 
                         });
                 }
             }, function (err) {
+                if (err.data.tokenError) {
+                    dialogSvc.showAlert("Information", "Token expired", "Ok", true, "parent", undefined)
+                        .then(function (res) {
+                            $state.go('logins');
+                        });
+                }
                 console.log(err);
             });
         }

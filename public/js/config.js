@@ -712,7 +712,8 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                         }
                     ]);
                 }
-            }
+            },
+            controller: "registerCtrl"
         })
         .state('lockscreen', {
             url: "/lockscreen",

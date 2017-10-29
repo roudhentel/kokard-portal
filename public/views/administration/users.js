@@ -1,4 +1,4 @@
-angular.module('koKard').controller('usersCtrl', function ($scope, $http, Dialog) {
+angular.module('koKard').controller('usersCtrl', function ($scope, $http, $state, Dialog) {
     let s = $scope;
     let dialogSvc = new Dialog();
 
@@ -18,6 +18,12 @@ angular.module('koKard').controller('usersCtrl', function ($scope, $http, Dialog
                 s.usersPage.listUser = res.data.rows;
             }
         }, function (err) {
+            if (err.data.tokenError) {
+                dialogSvc.showAlert("Information", "Token expired", "Ok", true, "parent", undefined)
+                    .then(function (res) {
+                        $state.go('logins');
+                    });
+            }
             console.log(err);
         });
     }();
@@ -76,7 +82,12 @@ angular.module('koKard').controller('usersCtrl', function ($scope, $http, Dialog
                             dialogSvc.showAlert("Information", "Successfully Deleted", "Ok", true, "parent", ev);
                         }
                     }, function (err) {
-                        console.log(err);
+                        if (err.data.tokenError) {
+                            dialogSvc.showAlert("Information", "Token expired", "Ok", true, "parent", undefined)
+                                .then(function (res) {
+                                    $state.go('logins');
+                                });
+                        }
                     });
 
                 }
