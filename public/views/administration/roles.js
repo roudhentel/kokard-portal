@@ -15,17 +15,6 @@ angular.module('koKard').controller('rolesCtrl', function ($scope, $http, Dialog
             if (res.data.success) {
                 var newArr = [];
                 res.data.rows.forEach(item => {
-                    // var newObj = {
-                    //     id: item.Id,
-                    //     name: item.RoleName,
-                    //     permission: {}
-                    // }
-
-                    // for (let prop in item) {
-                    //     if (prop.toLowerCase() !== "id" && prop.toLowerCase() !== "rolename") {
-                    //         newObj.permission[prop] = item[prop];
-                    //     }
-                    // }
                     newArr.push(parseRole(item));
                 });
 
@@ -36,7 +25,7 @@ angular.module('koKard').controller('rolesCtrl', function ($scope, $http, Dialog
         });
     }
 
-    let parseRole = function(item) {
+    let parseRole = function (item) {
         var newObj = {
             id: item.Id,
             name: item.RoleName,

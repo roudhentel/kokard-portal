@@ -22,7 +22,9 @@ function UserService() {
                     if (res.length > 0) {
                         bcrypt.compare(params.password, res[0]["Password"], function (err, isSame) {
                             if (isSame) {
-                                s.finishTransaction(undefined, { authenticated: true }, callback);
+                                let user = res[0];
+                                delete user["Password"];
+                                s.finishTransaction(undefined, { authenticated: true, user: user }, callback);
                             } else {
                                 s.finishTransaction({ "message": "Invalid username or password" }, undefined, callback);
                             }

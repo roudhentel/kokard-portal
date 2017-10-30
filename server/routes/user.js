@@ -16,7 +16,8 @@ function UserRoute() {
                 });
                 response.status(result.status).json({
                     success: true,
-                    token: token
+                    token: token,
+                    user: result.details.rows.user
                 });
             } else {
                 response.status(result.status).json(result.details);

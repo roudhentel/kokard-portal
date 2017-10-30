@@ -10,65 +10,85 @@
                             <span class="block m-t-xs">
                                 <strong class="font-bold">Gary Sproule</strong>
                             </span>
-                            <span class="text-muted text-xs block">Chairman <b class="caret"></b></span>
+                            <span class="text-muted text-xs block">Chairman
+                                <b class="caret"></b>
+                            </span>
                         </span>
                     </a>
                     <ul uib-dropdown-menu class="animated fadeInRight m-t-xs">
-                        <li><a ui-sref="app.profile">Profile</a></li>
-                        <li><a ui-sref="app.contacts">Contacts</a></li>
-                        <li><a ui-sref="mailbox.inbox">Mailbox</a></li>
+                        <li>
+                            <a ui-sref="app.profile">Profile</a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.contacts">Contacts</a>
+                        </li>
+                        <li>
+                            <a ui-sref="mailbox.inbox">Mailbox</a>
+                        </li>
                         <li class="divider"></li>
-                        <li><a ui-sref="logins" data-target="#login">Logout</a></li>
+                        <li>
+                            <a ui-sref="logins" data-target="#login">Logout</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="logo-element">
                     Ko-Ka
                 </div>
             </li>
-            <li ui-sref-active="active">
-                <a ui-sref="main.card-search"><i class="fa fa-search"></i> <span class="nav-label">{{ 'CARDSEARCH' | translate }}</span> </a>
+            <li ui-sref-active="active" ng-if="gbl.role.Search.toString().charAt(1) === '1'">
+                <a ui-sref="main.card-search">
+                    <i class="fa fa-search"></i>
+                    <span class="nav-label">{{ 'CARDSEARCH' | translate }}</span>
+                </a>
             </li>
 
-            <li ng-class="{active: $state.includes('card')}">
-                <a><i class="fa fa-credit-card"></i> <span class="nav-label">{{ 'CARD' | translate }}</span><span class="fa arrow"></span></a>
+            <li ng-class="{active: $state.includes('card')}" ng-if="gbl.role.Card_Summary.toString().charAt(1) === '1' || gbl.role.Card_CardholderInformation.toString().charAt(1) === '1' 
+                || gbl.role.Card_AlertsAndNotification.toString().charAt(1) === '1' || gbl.role.Card_CreditCardLimits.toString().charAt(1) === '1'
+                || gbl.role.Card_CreditCardStatementCycle.toString().charAt(1) === '1' || gbl.role.Card_SupplementaryCard.toString().charAt(1) === '1'
+                || gbl.role.Card_History.toString().charAt(1) === '1'">
+                <a>
+                    <i class="fa fa-credit-card"></i>
+                    <span class="nav-label">{{ 'CARD' | translate }}</span>
+                    <span class="fa arrow"></span>
+                </a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('card')}">
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Card_Summary.toString().charAt(1) === '1'">
                         <a ui-sref="card.details">
                             <i class="fa" ng-class="$state.includes('card.details') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{'SUMMARY' | translate}}</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Card_CardholderInformation.toString().charAt(1) === '1'">
                         <a ui-sref="card.cardholder-information">
                             <i class="fa" ng-class="$state.includes('card.cardholder-information') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{'CARDHOLDERINFORMATION' | translate}}</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Card_AlertsAndNotification.toString().charAt(1) === '1'">
                         <a ui-sref="card.alerts-notifications">
                             <i class="fa" ng-class="$state.includes('card.alerts-notifications') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{'ALERTSANDNOTIFICATIONS' | translate}}</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Card_CreditCardLimits.toString().charAt(1) === '1'">
                         <a ui-sref="card.creditcard-limits">
                             <i class="fa" ng-class="$state.includes('card.creditcard-limits') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{'CREDITCARDLIMITS' | translate}}</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Card_CreditCardStatementCycle.toString().charAt(1) === '1'">
                         <a ui-sref="card.creditcard-statement-cycle">
                             <i class="fa" ng-class="$state.includes('card.creditcard-statement-cycle') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{'CCSTATEMENTCYCLE' | translate}}</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Card_SupplementaryCard.toString().charAt(1) === '1'">
                         <a ui-sref="card.supplementary-card">
                             <i class="fa" ng-class="$state.includes('card.supplementary-card') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{'SUPCARD' | translate}}</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Card_History.toString().charAt(1) === '1'">
                         <a ui-sref="card.history">
                             <i class="fa" ng-class="$state.includes('card.history') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{'History' | translate}}</span>
@@ -77,16 +97,20 @@
                 </ul>
             </li>
 
-            <li ng-class="{active: $state.includes('cardholder')}">
-                <a><i class="fa fa-user-circle"></i> <span class="nav-label">{{ 'CARDHOLDER' | translate }}</span><span class="fa arrow"></span></a>
+            <li ng-class="{active: $state.includes('cardholder')}" ng-if="gbl.role.Cardholder_Profile.toString().charAt(1) === '1' || gbl.role.Cardholder_CardsByMemberId.toString().charAt(1) === '1'">
+                <a>
+                    <i class="fa fa-user-circle"></i>
+                    <span class="nav-label">{{ 'CARDHOLDER' | translate }}</span>
+                    <span class="fa arrow"></span>
+                </a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardholder')}">
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Cardholder_Profile.toString().charAt(1) === '1'">
                         <a ui-sref="cardholder.profile">
                             <i class="fa" ng-class="$state.includes('cardholder.profile') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Profile</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Cardholder_CardsByMemberId.toString().charAt(1) === '1'">
                         <a ui-sref="cardholder.cardby-memberid">
                             <i class="fa" ng-class="$state.includes('cardholder.cardby-memberid') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Cards by Member Id</span>
@@ -94,52 +118,60 @@
                     </li>
                 </ul>
             </li>
-            <li ng-class="{active: $state.includes('cardprogram')}">
-                <a><i class="fa fa-book"></i> <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span><span class="fa arrow"></span></a>
+
+            <li ng-class="{active: $state.includes('cardprogram')}" ng-if="gbl.role.CardProgram_Details.toString().charAt(1) === '1' || gbl.role.CardProgram_CreditCardRules.toString().charAt(1) === '1'
+                || gbl.role.CardProgram_Fraud.toString().charAt(1) === '1' || gbl.role.CardProgram_MCCPrivileges.toString().charAt(1) === '1'
+                || gbl.role.CardProgram_Parameters.toString().charAt(1) === '1' || gbl.role.CardProgram_Restrictions.toString().charAt(1) === '1'
+                || gbl.role.CardProgram_Rewards.toString().charAt(1) === '1' || gbl.role.CardProgram_Services.toString().charAt(1) === '1'">
+                <a>
+                    <i class="fa fa-book"></i>
+                    <span class="nav-label">{{ 'CARDPROGRAM' | translate }}</span>
+                    <span class="fa arrow"></span>
+                </a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('cardprogram')}">
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_Details.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.details">
                             <i class="fa" ng-class="$state.includes('cardprogram.details') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Details</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_CreditCardRules.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.creditcard-rules">
                             <i class="fa" ng-class="$state.includes('cardprogram.creditcard-rules') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Credit Card Rules</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_Fraud.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.fraud">
                             <i class="fa" ng-class="$state.includes('cardprogram.fraud') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Fraud</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_MCCPrivileges.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.mcc-priviledges">
                             <i class="fa" ng-class="$state.includes('cardprogram.mcc-priviledges') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">MCC Privileges</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_Parameters.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.parameters">
                             <i class="fa" ng-class="$state.includes('cardprogram.parameters') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Parameters</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_Restrictions.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.restrictions">
                             <i class="fa" ng-class="$state.includes('cardprogram.restrictions') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Restrictions</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_Rewards.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.rewards">
                             <i class="fa" ng-class="$state.includes('cardprogram.rewards') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Rewards</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.CardProgram_Services.toString().charAt(1) === '1'">
                         <a ui-sref="cardprogram.services">
                             <i class="fa" ng-class="$state.includes('cardprogram.services') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Services</span>
@@ -147,99 +179,114 @@
                     </li>
                 </ul>
             </li>
-            <li ng-class="{active: $state.includes('transactions')}">
-                <a><i class="fa fa-exchange"></i> <span class="nav-label">{{ 'Transactions' | translate }}</span><span class="fa arrow"></span></a>
+
+            <li ng-class="{active: $state.includes('transactions')}" ng-if="gbl.role.Transactions_Details.toString().charAt(1) === '1' || gbl.role.Transactions_DirectDeposits.toString().charAt(1) === '1'
+                || gbl.role.Transactions_DeclinedTransactions.toString().charAt(1) === '1' || gbl.role.Transactions_AccountStatements.toString().charAt(1) === '1'">
+                <a>
+                    <i class="fa fa-exchange"></i>
+                    <span class="nav-label">{{ 'Transactions' | translate }}</span>
+                    <span class="fa arrow"></span>
+                </a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('transactions')}">
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Transactions_Details.toString().charAt(1) === '1'">
                         <a ui-sref="transactions.details">
                             <i class="fa" ng-class="$state.includes('transactions.details') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Details</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Transactions_DirectDeposits.toString().charAt(1) === '1'">
                         <a ui-sref="transactions.direct-deposits">
                             <i class="fa" ng-class="$state.includes('transactions.direct-deposits') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Direct Deposits</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Transactions_DeclinedTransactions.toString().charAt(1) === '1'">
                         <a ui-sref="transactions.declined-transactions">
                             <i class="fa" ng-class="$state.includes('transactions.declined-transactions') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Declined Transactions</span>
                         </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="transactions.account-statements">
+                        <a ui-sref="transactions.account-statements" ng-if="gbl.role.Transactions_AccountStatements.toString().charAt(1) === '1'">
                             <i class="fa" ng-class="$state.includes('transactions.account-statements') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Account Statements</span>
                         </a>
                     </li>
                 </ul>
             </li>
-            <li ng-class="{active: $state.includes('others')}">
-                <a><i class="fa fa-ellipsis-h"></i> <span class="nav-label">{{ 'Others' | translate }}</span><span class="fa arrow"></span></a>
+            <li ng-class="{active: $state.includes('others')}" ng-if="gbl.role.Others_CallsHistory.toString().chatAt(1) === '1' || gbl.role.Others_ChangeResetPIN.toString().charAt(1) === '1'
+                || gbl.role.Others_BlockCloseCard.toString().charAt(1) === '1' || gbl.role.Others_AddComments.toString().charAt(1) === '1'
+                || gbl.role.Others_ApplyFee.toString().charAt(1) === '1' || gbl.role.Others_CloseACall.toString().charAt(1) === '1'
+                || gbl.role.Others_LinkExternalCard.toString().charAt(1) === '1' || gbl.role.Others_ReissueCard.toString().charAt(1) === '1'
+                || gbl.role.Others_OnlinePaymentActivity.toString().charAt(1) === '1' || gbl.role.Others_UpgradeCard.toString().charAt(1) === '1'
+                || gbl.role.Others_AdministrativeServices.toString().charAt(1) === '1'">
+                <a>
+                    <i class="fa fa-ellipsis-h"></i>
+                    <span class="nav-label">{{ 'Others' | translate }}</span>
+                    <span class="fa arrow"></span>
+                </a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('others')}">
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_CallsHistory.toString().chatAt(1) === '1'">
                         <a ui-sref="others.calls-history">
                             <i class="fa" ng-class="$state.includes('others.calls-history') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Calls History</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_ChangeResetPIN.toString().charAt(1) === '1'">
                         <a ui-sref="others.change-reset-pin">
                             <i class="fa" ng-class="$state.includes('others.change-reset-pin') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Change/Reset PIN</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_BlockCloseCard.toString().charAt(1) === '1'">
                         <a ui-sref="others.block-close-card">
                             <i class="fa" ng-class="$state.includes('others.block-close-card') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Block/Close Card</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_AddComments.toString().charAt(1) === '1'">
                         <a ui-sref="others.add-comments">
                             <i class="fa" ng-class="$state.includes('others.add-comments') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Add Comments</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_ApplyFee.toString().charAt(1) === '1'">
                         <a ui-sref="others.apply-fee">
                             <i class="fa" ng-class="$state.includes('others.apply-fee') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Apply Fee</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_CloseACall.toString().charAt(1) === '1'">
                         <a ui-sref="others.close-a-call">
                             <i class="fa" ng-class="$state.includes('others.close-a-call') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Close a Call</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_LinkExternalCard.toString().charAt(1) === '1'">
                         <a ui-sref="others.link-external-card">
                             <i class="fa" ng-class="$state.includes('others.link-external-card') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Link External Card</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_ReissueCard.toString().charAt(1) === '1'">
                         <a ui-sref="others.reissue-card">
                             <i class="fa" ng-class="$state.includes('others.reissue-card') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Reissue Card</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_OnlinePaymentActivity.toString().charAt(1) === '1'">
                         <a ui-sref="others.online-payment-activity">
                             <i class="fa" ng-class="$state.includes('others.online-payment-activity') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Online Payment Activity</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_UpgradeCard.toString().charAt(1) === '1'">
                         <a ui-sref="others.upgrade-card">
                             <i class="fa" ng-class="$state.includes('others.upgrade-card') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Upgrade Card</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Others_AdministrativeServices.toString().charAt(1) === '1'">
                         <a ui-sref="others.admin-services">
                             <i class="fa" ng-class="$state.includes('others.admin-services') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">{{ 'Administrative Services' | translate }}</span>
@@ -247,16 +294,20 @@
                     </li>
                 </ul>
             </li>
-            <li ng-class="{active: $state.includes('administration')}">
-                <a><i class="fa fa-lock"></i> <span class="nav-label">Administration</span><span class="fa arrow"></span></a>
+            <li ng-class="{active: $state.includes('administration')}" ng-if="gbl.role.Administration_Roles.toString().charAt(1) === '1' || gbl.role.Administration_Users.toString().charAt(1) === '1'">
+                <a>
+                    <i class="fa fa-lock"></i>
+                    <span class="nav-label">Administration</span>
+                    <span class="fa arrow"></span>
+                </a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('administration')}">
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Administration_Roles.toString().charAt(1) === '1'">
                         <a ui-sref="administration.roles">
                             <i class="fa" ng-class="$state.includes('administration.roles') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Roles</span>
                         </a>
                     </li>
-                    <li ui-sref-active="active">
+                    <li ui-sref-active="active" ng-if="gbl.role.Administration_Users.toString().charAt(1) === '1'">
                         <a ui-sref="administration.users">
                             <i class="fa" ng-class="$state.includes('administration.users') ? 'fa-dot-circle-o' : 'fa-circle-o'"></i>
                             <span class="nav-label">Users</span>
