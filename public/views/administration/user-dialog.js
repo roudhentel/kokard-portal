@@ -62,7 +62,7 @@ angular.module("koKard").controller("userDialogCtrl", function ($scope, Dialog, 
     }
 
     s.updateRole = function () {
-        s.user.roleName = s.userDialog.listRole.find(obj => obj.id === s.user.roleId).name;
+        s.user.RoleName = s.userDialog.listRole.find(obj => obj.id === s.user.RoleId).name;
     }
 
     s.save = function (isFormValid, ev) {
